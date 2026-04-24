@@ -448,10 +448,53 @@
   }
   @media (max-width: 820px) { .meta-grid { grid-template-columns: repeat(2, 1fr); } }
 
+  /* Horizontally-scrollable wrapper for any wide content (tables, etc.) */
+  .scroll-x {
+    margin-top: 40px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    /* subtle edge fade to indicate more content on narrow viewports */
+    background:
+      linear-gradient(90deg, var(--paper-deep) 30%, transparent) left center / 24px 100% no-repeat,
+      linear-gradient(-90deg, var(--paper-deep) 30%, transparent) right center / 24px 100% no-repeat;
+    background-attachment: local, local;
+  }
+  section.block.dark .scroll-x,
+  section.block.ink .scroll-x {
+    background:
+      linear-gradient(90deg, var(--navy) 30%, transparent) left center / 24px 100% no-repeat,
+      linear-gradient(-90deg, var(--navy) 30%, transparent) right center / 24px 100% no-repeat;
+    background-attachment: local, local;
+  }
+  /* Slim, restrained scrollbar */
+  .scroll-x::-webkit-scrollbar { height: 8px; }
+  .scroll-x::-webkit-scrollbar-track { background: transparent; }
+  .scroll-x::-webkit-scrollbar-thumb {
+    background: rgba(201,165,91,.4); border-radius: 4px;
+  }
+  .scroll-x::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+  /* "Swipe →" hint, only shown on narrow viewports */
+  .scroll-x[data-hint]::after {
+    content: attr(data-hint);
+    display: none;
+    margin-top: 8px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--gold-deep);
+    text-align: right;
+  }
+  @media (max-width: 760px) {
+    .scroll-x[data-hint]::after { display: block; }
+  }
+
   /* VERTICALS TABLE */
   .vtable {
-    margin-top: 40px; width: 100%; border-collapse: collapse;
+    margin: 0; width: 100%; border-collapse: collapse;
     font-size: 14px;
+    /* don't shrink below this — let the wrapper scroll instead */
+    min-width: 760px;
   }
   .vtable th {
     text-align: left;
@@ -1174,6 +1217,7 @@
     <h2>Nine verticals. One <em>stack</em> that runs them all.</h2>
     <p class="lede">Phase 1 is Final Expense. Phases 2–5 are pre-specified, seasonally sequenced, and share the same delivery machine. Commission scales listed are typical agent economics; CPA and LTV numbers are what <em>HMS</em> sees on the operator side.</p>
 
+    <div class="scroll-x" data-hint="Swipe →">
     <table class="vtable">
       <tr>
         <th>Vertical</th>
@@ -1246,6 +1290,7 @@
         <td>Adoption events + Q1</td>
       </tr>
     </table>
+    </div>
 
     <div style="margin-top:32px;font-size:14px;color:var(--muted);line-height:1.6;">
       Full vertical briefs (B2B agent profile, 15 B2C intent topics each, demographics, creative hooks, seasonality, Meta + DSP placement maps) available in <span style="font-family:'IBM Plex Mono',monospace;color:var(--gold-deep);">research/vertical-specs.md</span> — 607 lines, 27+ sources cited.
