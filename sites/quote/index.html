@@ -115,14 +115,47 @@
   /* Feature list */
   .features { list-style: none; padding: 0; margin: 0 0 32px; }
   .features li {
-    padding: 12px 0; border-bottom: 1px dashed rgba(11,26,54,.15);
-    font-size: 17px; display: grid; grid-template-columns: 26px 1fr; gap: 10px;
+    position: relative;
+    padding: 12px 0 12px 32px;
+    border-bottom: 1px dashed rgba(11,26,54,.15);
+    font-size: 17px; line-height: 1.55;
   }
   .features li:last-child { border-bottom: none; }
   .features li::before {
-    content: "✓"; color: var(--ok); font-weight: 700; font-size: 18px;
+    content: "✓";
+    position: absolute; left: 0; top: 12px;
+    color: var(--ok); font-weight: 700; font-size: 18px;
+    line-height: 1.55;
   }
   .features strong { font-weight: 600; color: var(--navy); }
+
+  /* Mobile safety — prevent grid items from overflowing viewport */
+  @media (max-width: 640px) {
+    body { font-size: 17px; }
+    .hero { padding: 36px 0 48px; }
+    .hero h1 { font-size: clamp(30px, 8vw, 42px); margin-bottom: 18px; }
+    .hero p.sub { font-size: 17px; margin-bottom: 28px; }
+    .hero .hero-grid { gap: 24px; }
+    .quote-card { padding: 24px 20px; }
+    .quote-card h2 { font-size: 22px; }
+    .features li { font-size: 16px; padding-left: 28px; }
+    .pricing-teaser { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .pricing-teaser .cell { padding: 14px 12px; }
+    .pricing-teaser .rate { font-size: 26px; }
+    .agent-head { gap: 10px; padding: 16px 0 14px; }
+    .agent-headshot { width: 52px; height: 52px; font-size: 22px; }
+    .agent-info .name { font-size: 18px; }
+    .agent-head .call-now { padding: 8px 12px; font-size: 12px; }
+    .agent-head .call-now .num { font-size: 14px; }
+    section.blk { padding: 44px 0; }
+    h2 { font-size: clamp(24px, 6vw, 32px); line-height: 1.15; }
+    p.lede { font-size: 16px; }
+    .faq .q summary { font-size: 17px; padding-right: 30px; }
+    .faq .q .a { font-size: 15px; }
+    .trust-bar { padding: 8px 0; font-size: 10px; }
+    .trust-bar .wrap { gap: 10px; justify-content: flex-start; }
+    .trust-bar .item { font-size: 10px; }
+  }
 
   /* Quote form */
   .quote-card {

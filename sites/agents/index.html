@@ -174,16 +174,53 @@
   }
   .vs-card ul { list-style: none; padding: 0; margin: 0; }
   .vs-card li {
-    padding: 12px 0; border-bottom: 1px dashed rgba(11,26,54,.1);
+    position: relative;
+    padding: 12px 0 12px 28px;
+    border-bottom: 1px dashed rgba(11,26,54,.1);
     font-size: 15px; line-height: 1.5;
-    display: grid; grid-template-columns: 22px 1fr; gap: 10px;
   }
   .vs-card li:last-child { border-bottom: none; }
   .vs-card li::before {
-    content: "✕"; color: var(--crimson); font-weight: 500;
+    content: "✕";
+    position: absolute; left: 0; top: 12px;
+    color: var(--crimson); font-weight: 500;
+    line-height: 1.5;
   }
-  .vs-card.good li::before {
-    content: "✓"; color: var(--ok); font-weight: 600;
+  .vs-card.good li::before { content: "✓"; color: var(--ok); font-weight: 600; }
+
+  /* Mobile safety */
+  @media (max-width: 640px) {
+    .hero { padding: 60px 0 70px; }
+    .hero h1 { font-size: clamp(32px, 8vw, 48px); margin-bottom: 20px; }
+    .hero .sub { font-size: 17px; margin-bottom: 28px; padding-left: 18px; }
+    .hero .stats { grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 36px; padding-top: 24px; }
+    .hero .stat .n { font-size: 28px; }
+    .hero .cta-row { gap: 10px; }
+    .btn { padding: 16px 22px; font-size: 11px; letter-spacing: .16em; }
+    section.blk { padding: 54px 0; }
+    h2 { font-size: clamp(28px, 6.5vw, 38px); line-height: 1.1; }
+    p.lede { font-size: 17px; }
+    .vs-card { padding: 24px 20px; }
+    .vs-card h3 { font-size: 19px; }
+    .vs-card li { font-size: 14px; padding-left: 24px; }
+    .step { padding: 22px 20px; }
+    .step h4 { font-size: 18px; }
+    .step p { font-size: 13px; }
+    .price { padding: 22px 18px 20px; }
+    .price .n { font-size: 32px; }
+    .price.featured { transform: none; }
+    .addon { padding: 14px 14px; flex-direction: column; align-items: flex-start; gap: 6px; }
+    .addon .k { font-size: 15px; }
+    .two-layer { gap: 14px; }
+    .layer-card { padding: 20px 18px; }
+    .layer-card h4 { font-size: 17px; }
+    .form-card { padding: 24px 20px; }
+    .form-card h3 { font-size: 20px; }
+    .form-row { grid-template-columns: 1fr; }
+    .ribbon { padding: 8px 0; font-size: 10px; letter-spacing: .1em; }
+    .nav { gap: 14px; font-size: 10px; }
+    .mast { padding: 16px 0; }
+    .logo-mark { font-size: 22px; }
   }
 
   /* Method steps */
@@ -437,7 +474,7 @@
           <li><strong>Exclusive</strong> leads — one agent, one lead, one time</li>
           <li>Refreshed every 7 days — never stale</li>
           <li>Consumers who actively searched for burial coverage</li>
-          <li>ArkData + ListMagic intent + 20B weekly signals</li>
+          <li>HMS proprietary intent stack · 20B weekly signals</li>
           <li>Meta campaigns targeted at <em>hashed</em> consumer IDs</li>
           <li>$250 trial first — you prove it yourself before retainer</li>
         </ul>
@@ -660,7 +697,7 @@
 <footer>
   <div class="wrap">
     <div>Hamilton Marketing Services · Florida final expense · 2026</div>
-    <div>Part of a <a href="https://hamilton-proposal.netlify.app">working proposal</a> · Powered by <a href="https://hamilton-fe-intent.netlify.app">live intent data</a></div>
+    <div>Hamilton Marketing Services · <a href="https://hamilton-fe-intent.netlify.app">Live HMS intent map ↗</a></div>
   </div>
 </footer>
 

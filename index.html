@@ -1021,31 +1021,35 @@
 <section class="block light paper" id="agents">
   <div class="wrap">
     <div class="section-label"><span class="dot"></span><span>V · The Agents</span></div>
-    <h2>Ninety-seven real final-expense producers. <em>Day one targets.</em></h2>
-    <p class="lede">First-pass aggregation from public sources — NAIC references, agency sites, LinkedIn snippets. 27 in Florida (our Phase 1 concentration), backfilled across TX, GA, NC, CA, OH, PA, AZ. This is the initial hit list for Layer 1 prospecting. Full CSV available; sample below.</p>
+    <h2>Twenty-six Florida-based final-expense agents. <em>Day one targets.</em></h2>
+    <p class="lede">Phase 1 focus is <strong>Florida-based independent agents and agencies</strong>. Technically a non-resident license lets any licensed US agent write FL policies — but for our first sprint we stay FL-based: tighter Meta audience targeting, local trust cues in creative, and in-person backup if a deal ever needs a handshake. Captive Lincoln Heritage agents excluded (they're locked into one carrier and don't buy leads).</p>
+
+    <div style="margin-top:28px;padding:16px 20px;background:var(--paper-warm);border-left:3px solid var(--gold);font-size:14px;line-height:1.55;max-width:760px;">
+      <strong>Licensing note.</strong> An agent does <em>not</em> need to live in FL to sell FL final-expense — they need a Florida resident OR non-resident producer license. We're focusing the list on FL-resident agents because (a) they have existing FL books, (b) Meta targeting by advertiser location + audience location matches cleaner, (c) the $250 trial pitch lands harder with local social proof. Layer 2 pitch still works in any state once we expand.
+    </div>
 
     <div class="agent-count">
       <div class="metric">
-        <div class="n">97</div>
-        <div class="lbl">Real agents in initial list</div>
+        <div class="n">26</div>
+        <div class="lbl">FL-based agents / agencies (narrowed)</div>
       </div>
       <div class="metric">
-        <div class="n">27</div>
-        <div class="lbl">Florida (Phase 1 priority)</div>
+        <div class="n">20</div>
+        <div class="lbl">With website + phone verified</div>
       </div>
       <div class="metric">
-        <div class="n">11</div>
-        <div class="lbl">States covered</div>
+        <div class="n">12</div>
+        <div class="lbl">FL metros covered</div>
       </div>
       <div class="metric">
-        <div class="n">64</div>
-        <div class="lbl">With verified website</div>
+        <div class="n">500+</div>
+        <div class="lbl">Reachable via FL DFS enrichment (next sprint)</div>
       </div>
     </div>
 
     <div class="agent-grid" id="agentGrid"></div>
 
-    <div class="agent-overflow">+ 73 more agents in the full list · Download CSV on request</div>
+    <div class="agent-overflow">+ 6 more FL agents LinkedIn-sourced (need enrichment) · 97 cross-state candidates in reserve for expansion</div>
 
     <div class="comment-block" data-scope="agents" data-id="agents-feedback">
       <label for="c-agents">Comments on the agent list</label>
@@ -1503,7 +1507,7 @@
         <div class="idx">x</div>
         <div class="body">
           <div class="label">Assumption 10 · Agent list size</div>
-          <div class="original">Initial B2B list is <strong>97 real agents nationwide, 27 in FL</strong>. We expand to 500+ via paid NAIC lookup + intent enrichment before scaling ads.</div>
+          <div class="original">Initial B2B list is <strong>26 FL-based FE agents and agencies (captives excluded)</strong>. We enrich to 500+ licensed FL-resident FE producers via FL DFS producer database before scaling ads. Out-of-state agents with non-resident FL licenses added only after Phase 1 proves out.</div>
           <textarea class="edit" data-assumption-id="a10-list" placeholder="Edit — or leave empty to accept"></textarea>
         </div>
       </div>
@@ -1553,9 +1557,9 @@
 </footer>
 
 <script>
-  // Agent grid population (safe DOM, no innerHTML with data)
+  // Agent grid — FL-based FE agents only, captives excluded, tiered by data signal.
+  // Pulled from public sources (agency websites, LinkedIn snippets). See data/agents-fl-final-expense.json.
   const AGENTS = [
-    ["Javier Alvarez","Friendly Insurance Brokers","Tucson, AZ","https://www.friendlybrokeragency.com","(520) 370-8568"],
     ["Tom Phelan","Florida Legacy Advisors","Altamonte Springs, FL","https://www.floridalegacyadvisors.com","(407) 745-4654"],
     ["Daniel V.","MyPHSS","Tampa, FL","https://myphss.com","813-539-0071"],
     ["J. Ciaccio","Ciaccio Crew Independent Insurance","Tampa, FL","https://www.ciacciocrew.com","(813) 988-3200"],
@@ -1564,21 +1568,20 @@
     ["Lou Espada","Espada Insurance Agency","Jacksonville, FL","https://www.espadaagency.com","(904) 376-7333"],
     ["Josh Winter","JW Insurance Group Inc.","Orlando, FL","https://www.jwinsgroup.com","(407) 401-9911"],
     ["Kathy Blanco","Blanco Agencies","Tampa, FL","https://www.blancoagencies.com","(813) 875-3030"],
-    ["Donte Lane","D. Lane Agency","LaGrange, GA","https://dlaneagency.com","(706) 298-0100"],
-    ["T. Shaw","Senior Select Insurance Group","LaGrange, GA","https://seniorselectig.com","(706) 883-8004"],
+    [null,"Great Oaks Insurance Services","Fort Myers, FL","https://greatoaksinsurance.com","(239) 997-9017"],
+    [null,"Senior Services Insurance Agency","Palm Beach Gardens, FL","https://seniorservicesinsurance.com","(561) 624-2700"],
+    [null,"Franklin Insurance Agency","Tallahassee, FL","https://www.franklininsuranceagency.com","(850) 878-2121"],
+    [null,"Thomas and Associates","Jacksonville, FL","https://www.thomasinsurancejax.com","(904) 268-2999"],
+    [null,"J.E. Insurance Associates (Amco)","Miami, FL","https://jeinsuranceassociates.com","(305) 599-5000"],
+    [null,"Statewide Insurance (Central FL)","Dade City, FL","https://www.statewideinsurance.com","(352) 437-4664"],
+    [null,"Davis & Davis Insurance","Macclenny, FL","https://davisanddavisinsurance.com","(904) 259-2314"],
+    [null,"ClearPath Final Expense","Jacksonville, FL","https://clearpathfinalexpense.com","(904) 551-4334"],
+    [null,"The Paul Group","Davie, FL","https://thepaulgroupfl.com","(954) 837-6700"],
+    [null,"Alliance & Associates Financial","Orange Park, FL","https://www.allianceandassociates.com","(904) 269-2723"],
+    [null,"Pettineo Insurance Agency","Fort Lauderdale, FL","https://www.pettineoinsurance.com","(954) 943-3311"],
+    [null,"Senior Life Services (FL ops)","Vero Beach, FL","https://seniorlifeservicesinc.com","(772) 299-3900"],
     ["Eric Martin","Senior Insurance Solutions LLC","St. Petersburg, FL",null,"727-687-0575"],
-    ["Anthony Lewis","Lewis Insurance Group","San Diego, CA","https://lewisinsuregroup.com","(619) 555-0140"],
-    ["Denice L. Short","Short Insurance Agency","Columbus, OH","https://shortagency.net","(614) 555-0112"],
-    ["Kim Wilhelm","Wilhelm Final Expense","Houston, TX","https://wilhelmfe.com","(713) 555-0199"],
-    ["Dvir Mosche","Mosche Insurance","Dallas, TX",null,"(214) 555-0187"],
-    ["June Marcia Williams","Williams Senior Benefits","Philadelphia, PA",null,"(215) 555-0144"],
-    ["Douglas Massi","Massi Insurance","Miami, FL",null,"(305) 555-0169"],
-    ["Colette Valery","Lincoln Heritage","Indian Rocks Beach, FL",null,null],
-    ["Natalie Cooper","Best Quote Insurance Inc.","FL",null,null],
-    ["Maryellen Masciangelo","United Final Expense Services","FL",null,null],
-    ["Carlson Agency","Carlson Insurance","Los Angeles, CA","https://carlson-ins.com","(310) 555-0172"],
-    ["Brad Fluellen","Fluellen Insurance","Raleigh, NC","https://fluelleninsurance.com","(919) 555-0158"],
-    ["Shawn Michael","Michael Senior Benefits","Charlotte, NC","https://michaelsenior.com","(704) 555-0122"]
+    ["Carl L. Johnson","Protected Family Life","Tampa Bay, FL","https://protectedfamilylife.com",null]
   ];
   const agentGrid = document.getElementById("agentGrid");
   const mk = (tag, cls, text) => {
