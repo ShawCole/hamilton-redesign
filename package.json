@@ -1,0 +1,10 @@
+{
+  "name": "hamilton-proposal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Working proposal one-pager for Hamilton Marketing Services",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

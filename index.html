@@ -1,0 +1,1383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hamilton Marketing Services — Proposal No. 01</title>
+<meta name="description" content="A confidential working proposal for Hamilton Marketing Services. Prepared for Ethan Hamilton." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #0B1A36;
+    --navy-ink: #06102A;
+    --navy-soft: #132746;
+    --gold: #C9A55B;
+    --gold-bright: #E3B865;
+    --gold-deep: #9B7E3F;
+    --paper: #F4EFE6;
+    --paper-warm: #ECE4D3;
+    --paper-deep: #E2D8C3;
+    --ink: #0B1A36;
+    --muted: #6B6B6B;
+    --rule: #C9A55B;
+    --crimson: #7A1C2E;
+    --ok: #3E6B44;
+    --maxw: 1180px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: var(--gold); color: var(--navy); }
+
+  /* Paper grain overlay on light sections */
+  .paper::before {
+    content: "";
+    position: absolute; inset: 0;
+    pointer-events: none;
+    opacity: .18;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .dark::before {
+    content: "";
+    position: absolute; inset: 0;
+    pointer-events: none;
+    opacity: .22;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; position: relative; }
+  @media (max-width: 640px) { .wrap { padding: 0 20px; } }
+
+  /* ──────────────────────── MASTHEAD ──────────────────────── */
+  header.masthead {
+    border-bottom: 1px solid rgba(11,26,54,.2);
+    padding: 22px 0 18px;
+    position: relative;
+  }
+  .masthead .row {
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--navy);
+  }
+  .masthead .row .ticker { color: var(--gold-deep); }
+  .masthead .mark {
+    font-family: "Fraunces", serif; font-weight: 500;
+    font-size: clamp(38px, 7vw, 72px); line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 14px 0 4px;
+    font-variation-settings: "opsz" 144, "SOFT" 0;
+  }
+  .masthead .mark em {
+    font-style: italic; font-weight: 400; color: var(--gold-deep);
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+  }
+  .masthead .tagline {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted);
+    padding-top: 6px;
+    border-top: 1px dashed rgba(11,26,54,.25);
+  }
+
+  /* ──────────────────────── HERO ──────────────────────── */
+  section.hero {
+    position: relative;
+    background: var(--navy);
+    color: var(--paper);
+    padding: 110px 0 120px;
+    overflow: hidden;
+  }
+  section.hero .ornament {
+    position: absolute; top: 0; right: -80px;
+    width: 540px; height: 540px;
+    background: radial-gradient(circle at 30% 30%, rgba(227,184,101,.22), rgba(227,184,101,0) 60%);
+    pointer-events: none;
+    filter: blur(2px);
+  }
+  section.hero .meta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 26px;
+    display: flex; gap: 24px; flex-wrap: wrap;
+  }
+  section.hero h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 300;
+    font-size: clamp(44px, 7vw, 92px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin: 0 0 36px;
+    max-width: 920px;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+  section.hero h1 em {
+    font-style: italic; color: var(--gold-bright); font-weight: 300;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+  }
+  section.hero .kicker {
+    max-width: 620px;
+    font-size: 18px; line-height: 1.55; color: rgba(244,239,230,.82);
+    border-left: 1px solid var(--gold); padding-left: 22px;
+  }
+  section.hero .stamp {
+    position: absolute; bottom: 36px; right: 36px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold-bright);
+    border: 1px solid var(--gold);
+    padding: 8px 12px;
+    transform: rotate(-3deg);
+    opacity: .8;
+  }
+
+  /* ──────────────────────── SECTION STRUCTURE ──────────────────────── */
+  section.block { padding: 90px 0; position: relative; }
+  section.block.light { background: var(--paper); }
+  section.block.warm { background: var(--paper-warm); }
+  section.block.deep-warm { background: var(--paper-deep); }
+  section.block.dark { background: var(--navy); color: var(--paper); }
+  section.block.dark .muted { color: rgba(244,239,230,.7); }
+
+  .section-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .26em; text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 18px;
+    display: inline-flex; gap: 14px; align-items: baseline;
+  }
+  .section-label .dot {
+    display: inline-block; width: 6px; height: 6px;
+    background: var(--gold); border-radius: 50%;
+    transform: translateY(-2px);
+  }
+  .dark .section-label { color: var(--gold-bright); }
+
+  h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(34px, 5vw, 60px);
+    line-height: 1.04;
+    letter-spacing: -0.022em;
+    margin: 0 0 18px;
+    max-width: 900px;
+    font-variation-settings: "opsz" 144;
+  }
+  h2 em { font-style: italic; color: var(--gold-deep); font-weight: 400; }
+  .dark h2 em { color: var(--gold-bright); }
+
+  h3 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 24px; line-height: 1.2; letter-spacing: -0.012em;
+    margin: 0 0 10px;
+  }
+
+  p.lede {
+    font-size: 20px; line-height: 1.5; color: var(--ink);
+    max-width: 700px; margin: 0 0 40px;
+  }
+  .dark p.lede { color: rgba(244,239,230,.85); }
+
+  /* ──────────────────────── BRAND GUIDE ──────────────────────── */
+  .brand-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 56px;
+    margin-top: 56px;
+  }
+  @media (max-width: 820px) { .brand-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+  .swatch-row {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+  }
+  .swatch {
+    aspect-ratio: 1.35/1;
+    border-radius: 2px;
+    position: relative;
+    padding: 14px 16px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,.06);
+  }
+  .swatch .name { font-weight: 500; }
+  .swatch .hex { opacity: .85; }
+  .sw-navy { background: var(--navy); color: var(--paper); }
+  .sw-gold { background: var(--gold); color: var(--navy); }
+  .sw-paper { background: var(--paper); color: var(--ink); border: 1px solid rgba(11,26,54,.1); }
+  .sw-crimson { background: var(--crimson); color: var(--paper); }
+
+  .type-specimen {
+    border: 1px solid rgba(11,26,54,.15);
+    padding: 28px 28px 24px;
+    background: #FBF8F1;
+    position: relative;
+  }
+  .type-specimen + .type-specimen { margin-top: 14px; }
+  .type-specimen .label {
+    position: absolute; top: -10px; left: 20px;
+    background: #FBF8F1;
+    padding: 0 8px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold-deep);
+  }
+  .type-specimen .ex {
+    font-family: "Fraunces", serif;
+    font-weight: 400; font-size: 42px; line-height: 1.05; letter-spacing: -0.02em;
+  }
+  .type-specimen .ex em { font-style: italic; color: var(--gold-deep); }
+  .type-specimen.body .ex {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400; font-size: 17px; line-height: 1.55; letter-spacing: 0;
+  }
+  .type-specimen.mono .ex {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px; letter-spacing: .02em;
+  }
+  .type-specimen .usage {
+    margin-top: 10px; padding-top: 10px;
+    border-top: 1px dashed rgba(11,26,54,.2);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .logo-plate {
+    margin-top: 28px;
+    border: 1px solid rgba(11,26,54,.15);
+    background: #FBF8F1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 180px;
+    overflow: hidden;
+  }
+  .logo-plate > div {
+    padding: 30px 24px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+  .logo-plate > div + div {
+    background: var(--navy); color: var(--paper);
+  }
+  .logo-mark {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 52px; line-height: 1;
+    letter-spacing: -0.04em;
+    font-variation-settings: "opsz" 144;
+  }
+  .logo-mark em { font-style: italic; color: var(--gold-deep); font-weight: 400; }
+  .logo-plate > div + div .logo-mark em { color: var(--gold-bright); }
+  .logo-plate .sub {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 9px; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .logo-plate > div + div .sub { color: rgba(244,239,230,.6); }
+
+  .tone-list { list-style: none; padding: 0; margin: 28px 0 0; }
+  .tone-list li {
+    display: grid; grid-template-columns: auto 1fr; gap: 14px;
+    padding: 12px 0; border-bottom: 1px dashed rgba(11,26,54,.18);
+    font-size: 15px; line-height: 1.5;
+  }
+  .tone-list li:last-child { border-bottom: none; }
+  .tone-list .badge {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+    padding: 4px 8px; border-radius: 2px;
+    background: var(--navy); color: var(--gold-bright);
+    align-self: start; white-space: nowrap;
+  }
+  .tone-list .badge.off { background: var(--paper-deep); color: var(--crimson); }
+
+  /* ──────────────────────── SERVICE CARDS ──────────────────────── */
+  .services {
+    display: grid; gap: 24px;
+    margin-top: 48px;
+  }
+  .svc {
+    display: grid;
+    grid-template-columns: 72px 1fr 380px;
+    gap: 40px;
+    padding: 36px 0 36px;
+    border-top: 1px solid rgba(11,26,54,.22);
+    align-items: start;
+  }
+  .svc:last-child { border-bottom: 1px solid rgba(11,26,54,.22); }
+  @media (max-width: 900px) {
+    .svc { grid-template-columns: 1fr; gap: 20px; padding: 28px 0; }
+  }
+  .svc .num {
+    font-family: "Fraunces", serif;
+    font-weight: 400; font-style: italic;
+    font-size: 44px; line-height: 1; color: var(--gold-deep);
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+  }
+  .svc .body h3 { font-size: 28px; line-height: 1.15; }
+  .svc .body p { max-width: 560px; color: var(--ink); }
+  .svc .body .meta-row {
+    margin-top: 14px;
+    display: flex; gap: 10px; flex-wrap: wrap;
+  }
+  .svc .body .tag {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .16em; text-transform: uppercase;
+    padding: 5px 10px;
+    background: var(--paper-deep); color: var(--navy);
+    border-radius: 2px;
+  }
+  .svc .mock {
+    background: var(--navy); color: var(--paper);
+    padding: 22px; border-radius: 2px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .04em;
+    line-height: 1.65;
+    position: relative;
+  }
+  .svc .mock .chip {
+    display: inline-block;
+    font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
+    padding: 3px 8px; margin-bottom: 12px;
+    background: rgba(227,184,101,.16); color: var(--gold-bright);
+    border-radius: 2px;
+  }
+  .svc .mock .hl { color: var(--gold-bright); }
+  .svc .mock .big {
+    font-family: "Fraunces", serif; font-weight: 400;
+    font-size: 38px; line-height: 1; letter-spacing: -0.02em;
+    margin: 8px 0 4px; color: var(--paper);
+    font-variation-settings: "opsz" 144;
+  }
+  .svc .mock .bar {
+    display: flex; gap: 6px; margin-top: 10px;
+  }
+  .svc .mock .bar > span {
+    flex: 1; height: 6px; border-radius: 2px;
+    background: rgba(244,239,230,.15);
+  }
+  .svc .mock .bar > span.on { background: var(--gold-bright); }
+  .svc .mock .funnel {
+    display: grid; gap: 4px;
+  }
+  .svc .mock .funnel > div {
+    padding: 6px 10px; background: rgba(227,184,101,.08);
+    border-left: 2px solid var(--gold);
+  }
+  .svc .mock .funnel > div:nth-child(2) { margin: 0 12px; background: rgba(227,184,101,.14); }
+  .svc .mock .funnel > div:nth-child(3) { margin: 0 24px; background: rgba(227,184,101,.22); }
+  .svc .mock .funnel > div:nth-child(4) { margin: 0 36px; background: var(--gold); color: var(--navy); }
+
+  /* Comment field */
+  .comment-block { margin-top: 22px; }
+  .comment-block label {
+    display: block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 8px;
+  }
+  .comment-block textarea {
+    width: 100%;
+    min-height: 84px;
+    padding: 14px 16px;
+    border: 1px solid rgba(11,26,54,.22);
+    background: #FBF8F1;
+    color: var(--ink);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 15px; line-height: 1.5;
+    border-radius: 2px;
+    resize: vertical;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .comment-block textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,165,91,.22);
+  }
+  .dark .comment-block textarea {
+    background: rgba(244,239,230,.04);
+    border-color: rgba(227,184,101,.3);
+    color: var(--paper);
+  }
+
+  /* ──────────────────────── PHASE 1 / VERTICAL ──────────────────────── */
+  .callouts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 48px; }
+  @media (max-width: 820px) { .callouts { grid-template-columns: repeat(2, 1fr); } }
+  .callout {
+    border-top: 2px solid var(--gold);
+    padding: 20px 2px 0;
+  }
+  .callout .n {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(40px, 4.5vw, 56px); line-height: 1; letter-spacing: -0.02em;
+    color: var(--paper);
+    font-variation-settings: "opsz" 144;
+  }
+  .callout .lbl {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+    color: rgba(244,239,230,.7);
+    margin-top: 12px;
+    line-height: 1.4;
+  }
+  .light .callout .n { color: var(--navy); }
+  .light .callout .lbl { color: var(--muted); }
+
+  /* Pricing table */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 36px;
+    font-size: 15px;
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+  .table th {
+    text-align: left;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold-deep);
+    padding: 14px 14px 10px;
+    border-bottom: 1px solid var(--gold);
+    font-weight: 500;
+  }
+  .dark .table th { color: var(--gold-bright); }
+  .table td {
+    padding: 14px;
+    border-bottom: 1px dashed rgba(11,26,54,.18);
+    vertical-align: top;
+  }
+  .dark .table td { border-bottom-color: rgba(244,239,230,.12); }
+  .table td.num {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px;
+  }
+  .table td strong { font-weight: 500; }
+  .table tr.featured td { background: rgba(201,165,91,.14); }
+  .dark .table tr.featured td { background: rgba(227,184,101,.12); }
+
+  /* Rollout timeline */
+  .timeline {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(11,26,54,.2);
+    border-bottom: 1px solid rgba(11,26,54,.2);
+  }
+  .dark .timeline { border-color: rgba(244,239,230,.2); }
+  @media (max-width: 820px) {
+    .timeline { grid-template-columns: repeat(2, 1fr); }
+  }
+  .phase {
+    padding: 22px 20px;
+    border-left: 1px dashed rgba(11,26,54,.2);
+    position: relative;
+  }
+  .dark .phase { border-color: rgba(244,239,230,.18); }
+  .phase:first-child { border-left: none; }
+  .phase .p-num {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 10px;
+  }
+  .dark .phase .p-num { color: var(--gold-bright); }
+  .phase .p-title {
+    font-family: "Fraunces", serif;
+    font-weight: 500; font-size: 19px; line-height: 1.2; letter-spacing: -0.01em;
+    margin-bottom: 10px;
+  }
+  .phase .p-desc { font-size: 13px; line-height: 1.5; color: var(--muted); }
+  .dark .phase .p-desc { color: rgba(244,239,230,.7); }
+  .phase.now {
+    background: linear-gradient(180deg, rgba(201,165,91,.18), rgba(201,165,91,.04));
+  }
+  .dark .phase.now {
+    background: linear-gradient(180deg, rgba(227,184,101,.18), rgba(227,184,101,0));
+  }
+
+  /* ──────────────────────── ASSUMPTIONS ──────────────────────── */
+  .assumptions { margin-top: 40px; }
+  .assumption {
+    padding: 24px 0;
+    border-top: 1px solid rgba(11,26,54,.18);
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 20px;
+  }
+  .assumption:last-child { border-bottom: 1px solid rgba(11,26,54,.18); }
+  .assumption .idx {
+    font-family: "Fraunces", serif;
+    font-style: italic; font-weight: 400;
+    font-size: 28px; line-height: 1; color: var(--gold-deep);
+    padding-top: 2px;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+  }
+  .assumption .body .label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold-deep); margin-bottom: 6px;
+  }
+  .assumption .original {
+    font-size: 17px; line-height: 1.5; margin-bottom: 14px;
+    color: var(--ink); max-width: 760px;
+  }
+  .assumption textarea.edit {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(11,26,54,.22);
+    background: #FBF8F1;
+    color: var(--ink);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 15px; line-height: 1.55;
+    border-radius: 2px;
+    resize: vertical;
+    min-height: 64px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .assumption textarea.edit:focus {
+    outline: none; border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,165,91,.22);
+  }
+  .assumption .hint {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--muted); margin-top: 8px;
+  }
+
+  /* ──────────────────────── NOTES + SUBMIT ──────────────────────── */
+  .notes-area textarea {
+    width: 100%;
+    min-height: 180px;
+    padding: 22px 24px;
+    border: 1px solid var(--gold);
+    background: var(--navy);
+    color: var(--paper);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 17px; line-height: 1.6;
+    border-radius: 2px;
+    resize: vertical;
+    margin-top: 28px;
+  }
+  .notes-area textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(227,184,101,.3);
+  }
+
+  .submit-wrap {
+    margin-top: 56px;
+    display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  button.submit {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px; letter-spacing: .24em; text-transform: uppercase;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 22px 44px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background .2s ease, transform .1s ease, box-shadow .2s ease;
+    position: relative;
+  }
+  button.submit:hover {
+    background: var(--gold-bright);
+    box-shadow: 0 8px 20px rgba(227,184,101,.25);
+  }
+  button.submit:active { transform: translateY(1px); }
+  button.submit:disabled { opacity: .55; cursor: not-allowed; }
+  .submit-note {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    color: rgba(244,239,230,.7);
+    max-width: 340px;
+    line-height: 1.5;
+  }
+
+  .confirm {
+    display: none;
+    margin-top: 44px;
+    padding: 32px 36px;
+    border: 1px solid var(--gold);
+    background: rgba(227,184,101,.1);
+    font-family: "Fraunces", serif;
+    font-weight: 400; font-size: 22px; line-height: 1.4;
+    color: var(--paper);
+    letter-spacing: -0.01em;
+  }
+  .confirm em { font-style: italic; color: var(--gold-bright); }
+  .confirm.show { display: block; animation: fadeUp .5s ease; }
+  .confirm .small {
+    display: block; margin-top: 14px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    color: rgba(244,239,230,.7);
+  }
+
+  /* ──────────────────────── FOOTER ──────────────────────── */
+  footer {
+    padding: 48px 0 64px;
+    background: var(--navy-ink);
+    color: rgba(244,239,230,.6);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+    border-top: 1px solid rgba(227,184,101,.25);
+  }
+  footer .row {
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+  }
+
+  /* ──────────────────────── UTILITIES ──────────────────────── */
+  hr.rule {
+    border: none;
+    border-top: 1px solid var(--gold);
+    margin: 64px 0;
+    opacity: .6;
+  }
+  .two-col {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px;
+    align-items: start;
+  }
+  @media (max-width: 820px) { .two-col { grid-template-columns: 1fr; gap: 32px; } }
+  .muted { color: var(--muted); }
+  .inline-rule {
+    display: inline-block;
+    width: 44px; height: 1px; background: var(--gold);
+    vertical-align: middle; margin: 0 14px 6px 0;
+  }
+
+  /* Founder card */
+  .founder {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+    align-items: start;
+    padding: 36px;
+    border: 1px solid rgba(227,184,101,.4);
+    background: rgba(244,239,230,.03);
+    border-radius: 2px;
+  }
+  @media (max-width: 680px) { .founder { grid-template-columns: 1fr; } }
+  .founder .portrait {
+    width: 120px; height: 120px;
+    border: 1px solid var(--gold);
+    background: var(--navy-soft);
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Fraunces", serif;
+    font-weight: 300; font-style: italic;
+    font-size: 56px; color: var(--gold-bright);
+    letter-spacing: -0.02em;
+  }
+  .founder blockquote {
+    margin: 0; font-family: "Fraunces", serif; font-weight: 300;
+    font-style: italic;
+    font-size: 22px; line-height: 1.45; color: var(--paper);
+    max-width: 640px;
+  }
+  .founder blockquote + .cite {
+    margin-top: 14px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold-bright);
+  }
+  .founder ul.bio {
+    margin: 20px 0 0; padding: 0; list-style: none;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: rgba(244,239,230,.75);
+  }
+  .founder ul.bio li::before {
+    content: "—"; color: var(--gold-bright); margin-right: 10px;
+  }
+
+  /* Staggered reveal */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═════════════════ MASTHEAD ═════════════════ -->
+<header class="masthead paper">
+  <div class="wrap">
+    <div class="row">
+      <span>Confidential — Prepared for Ethan Hamilton</span>
+      <span class="ticker">Proposal №. 01 · April 24, 2026 · Florida</span>
+    </div>
+    <div class="mark">Hamilton <em>Marketing</em> Services</div>
+    <div class="tagline">A working proposal · Brand · Offer · Go-to-market</div>
+  </div>
+</header>
+
+<!-- ═════════════════ HERO ═════════════════ -->
+<section class="hero dark">
+  <div class="ornament"></div>
+  <div class="wrap">
+    <div class="meta">
+      <span>Vol. I · Issue 01</span>
+      <span>A Shaw Cole / ArkData Working Document</span>
+    </div>
+    <h1>A lead machine built for <em>final‑expense agents</em><br/>who are done being burned by bad vendors.</h1>
+    <div class="kicker">
+      You don't need another 9-figure agency pitch. You need a focused offer, fast delivery, and intent data sharp enough that one trial turns into a recurring client. This is the working proposal for that — brand, positioning, offer stack, and Florida go-to-market — for you to mark up, push back on, and approve.
+    </div>
+  </div>
+  <div class="stamp">For review · Draft 01</div>
+</section>
+
+<!-- ═════════════════ I — THE BRAND ═════════════════ -->
+<section class="block light paper" id="brand">
+  <div class="wrap">
+    <div class="section-label"><span class="dot"></span><span>I · The Brand</span></div>
+    <h2>A mark that reads as a <em>private firm</em>, not another marketing agency.</h2>
+    <p class="lede">You're selling to insurance agents who've been through ten spray-and-pray vendors. The visual identity has to say <em>operator</em>, not <em>growth hacker</em>. The proposed direction leans editorial and financial — closer to a private banking brochure than a SaaS landing page.</p>
+
+    <div class="brand-grid">
+      <div>
+        <h3>Palette</h3>
+        <p class="muted" style="margin:0 0 22px;">Deep navy as the primary (authority, institutional trust). Warm gold as the accent, used sparingly — for rules, numerals, and moments of emphasis. Warm paper background instead of sterile white. Crimson reserved for warnings and callouts only.</p>
+        <div class="swatch-row">
+          <div class="swatch sw-navy"><span class="name">Ink Navy</span><span class="hex">#0B1A36 · Primary</span></div>
+          <div class="swatch sw-gold"><span class="name">Warm Gold</span><span class="hex">#C9A55B · Accent</span></div>
+          <div class="swatch sw-paper"><span class="name">Paper</span><span class="hex">#F4EFE6 · Base</span></div>
+          <div class="swatch sw-crimson"><span class="name">Crimson</span><span class="hex">#7A1C2E · Callout</span></div>
+        </div>
+
+        <div class="logo-plate">
+          <div>
+            <div class="logo-mark">H<em>M</em>S</div>
+            <div class="sub">Hamilton Marketing Services</div>
+          </div>
+          <div>
+            <div class="logo-mark">H<em>M</em>S</div>
+            <div class="sub">Mark · Reverse</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3>Typography</h3>
+        <p class="muted" style="margin:0 0 22px;">Fraunces (editorial serif, variable) for display. IBM Plex Sans for body — engineered for legibility, not startup-cute. IBM Plex Mono for data, numerals, and system labels. Every font in this proposal is the proposed system.</p>
+
+        <div class="type-specimen">
+          <span class="label">Display · Fraunces</span>
+          <div class="ex">The operator's <em>edge</em>.</div>
+          <div class="usage">Headlines · hero · magazine-style section openers</div>
+        </div>
+        <div class="type-specimen body">
+          <span class="label">Body · IBM Plex Sans</span>
+          <div class="ex">We run final-expense campaigns for Florida agents using intent signals they can't buy from Apollo or ZoomInfo. Our lists refresh every seven days. Your spend stays on live demand.</div>
+          <div class="usage">Body copy · proposal text · explainers</div>
+        </div>
+        <div class="type-specimen mono">
+          <span class="label">Data · IBM Plex Mono</span>
+          <div class="ex">$250 TRIAL → 10 LEADS → $750/MO · CPA $75–$150</div>
+          <div class="usage">Pricing · tables · metric callouts · timestamps</div>
+        </div>
+
+        <h3 style="margin-top:40px;">Tone</h3>
+        <ul class="tone-list">
+          <li><span class="badge">Be</span><span><strong>Direct and sales-forward.</strong> Speak like a closer who's already run the math. No soft pedaling. No "let's partner up" filler.</span></li>
+          <li><span class="badge">Be</span><span><strong>Data-backed.</strong> Every claim gets a number next to it. CPA, LTV, close rates, lead volume.</span></li>
+          <li><span class="badge">Be</span><span><strong>Personal.</strong> Your face, your voice, your story. The agent is buying you, not a logo.</span></li>
+          <li><span class="badge off">Avoid</span><span>Generic "digital marketing" vocabulary ("synergy," "empower," "unlock"). We're not a deck.</span></li>
+          <li><span class="badge off">Avoid</span><span>Stock photography, gradients of purple, and any hero that shows people in suits shaking hands.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="comment-block" data-scope="brand" data-id="brand-feedback">
+      <label for="c-brand">Your thoughts on the brand direction</label>
+      <textarea id="c-brand" placeholder="e.g. Swap gold for a deeper green. Keep the serif. The 'private firm' angle is right."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ II — POSITIONING ═════════════════ -->
+<section class="block dark" id="positioning">
+  <div class="wrap">
+    <div class="section-label"><span class="dot"></span><span>II · The Positioning</span></div>
+    <h2>What HMS <em>is</em>. And what it isn't.</h2>
+    <p class="lede">The mistake most new agencies make is pitching the whole kitchen. A founder who sells meta ads, SEO, VAs, cold calling, and data all at once gets filtered as "yet another generalist." The positioning below locks in a vertical, a geography, and a promise — then expands on proof, not hope.</p>
+
+    <div class="two-col" style="margin-top:48px;">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:14px;">HMS <span style="color:var(--paper);opacity:.4;">is</span></div>
+        <ul class="tone-list">
+          <li><span class="badge">Yes</span><span>A <strong>Florida-first lead partner</strong> for final-expense life-insurance agents.</span></li>
+          <li><span class="badge">Yes</span><span>A <strong>full-stack delivery team</strong> — creative, media buying, landing pages, CRM, VA follow-up — under one roof.</span></li>
+          <li><span class="badge">Yes</span><span>A <strong>proprietary intent-data layer</strong> (via ArkData / ListMagic) that no other final-expense lead vendor runs.</span></li>
+          <li><span class="badge">Yes</span><span>A <strong>future agency</strong>, with Ethan licensed, taking overrides on the business he creates.</span></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:14px;">HMS <span style="color:var(--paper);opacity:.4;">is not</span></div>
+        <ul class="tone-list">
+          <li><span class="badge off">No</span><span>A <strong>home services agency</strong>. Not roofers, not landscapers, not HVAC. That fight is lost on price.</span></li>
+          <li><span class="badge off">No</span><span>A <strong>general ad agency</strong>. We will turn down jobs outside the ICP for the first twelve months.</span></li>
+          <li><span class="badge off">No</span><span>A <strong>BPO storefront</strong>. The overseas team is fulfillment muscle, not the hero of the pitch.</span></li>
+          <li><span class="badge off">No</span><span>A <strong>Runday side project</strong>. This is a separate brand with its own P&amp;L.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="founder">
+      <div class="portrait">EH</div>
+      <div>
+        <blockquote>"I closed six million in medical sales in a year. I was number two out of fifteen hundred at Codified. The problem has never been the close. The problem has been getting them on the call."</blockquote>
+        <div class="cite">— Ethan Hamilton, April 24 call</div>
+        <ul class="bio">
+          <li>Head of Sales · Runday.ai</li>
+          <li>Ex-#2 Seller · Codified Inc. (Housecall Pro)</li>
+          <li>Prior founder · Roofer Domination</li>
+          <li>Delivery team · ~60 FTE · India + PH + PK</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="comment-block" data-scope="positioning" data-id="positioning-feedback">
+      <label for="c-pos">Your thoughts on the positioning</label>
+      <textarea id="c-pos" placeholder="e.g. Open up to Medicare from day one. Or: drop the 'future agency' line — too early to say."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ III — OFFER STACK ═════════════════ -->
+<section class="block warm paper" id="offer">
+  <div class="wrap">
+    <div class="section-label"><span class="dot"></span><span>III · The Offer Stack</span></div>
+    <h2>Five proposed sections on <em>hamiltonmarketing.co</em></h2>
+    <p class="lede">Each block is a section on the site and, behind it, a piece of the delivery machine. Every block has a comments box. Redline, rewrite, remove — go.</p>
+
+    <div class="services">
+
+      <article class="svc">
+        <div class="num">i.</div>
+        <div class="body">
+          <h3>The Intent-Data Hook</h3>
+          <p>Above the fold: "We put your ads in front of the Florida final-expense buyers who searched for burial coverage <em>this week</em>." One specific promise, one specific geography, one specific vertical — backed by a live number counting refreshed signals. This is the only part of the site anyone reads before deciding whether to book.</p>
+          <div class="meta-row">
+            <span class="tag">Hero Section</span>
+            <span class="tag">Live counter</span>
+            <span class="tag">Single CTA</span>
+          </div>
+          <div class="comment-block" data-scope="service" data-id="hero">
+            <label for="c-hero">Comments on this section</label>
+            <textarea id="c-hero" placeholder="Your notes, edits, or vetoes."></textarea>
+          </div>
+        </div>
+        <div class="mock">
+          <div class="chip">Hero Mock</div>
+          <div>FL · Final Expense</div>
+          <div class="big">11,482</div>
+          <div class="hl">buyers searched this week →</div>
+          <div style="margin-top:14px;opacity:.7;">Ad spend stays on live demand. <span class="hl">Refresh 7 days.</span></div>
+          <div class="bar">
+            <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="num">ii.</div>
+        <div class="body">
+          <h3>The Method — Four Steps</h3>
+          <p>Identify → Score → Activate → Refresh. A walk-through of how a lead actually flows — from ArkData pulling intent signals, to ListMagic scoring them, to a Meta campaign targeted at the hashed PII, to a weekly refresh that kills spent leads. This is the section that converts sophisticated agent buyers who've been burned before.</p>
+          <div class="meta-row">
+            <span class="tag">Process diagram</span>
+            <span class="tag">4 panels</span>
+            <span class="tag">Data visual</span>
+          </div>
+          <div class="comment-block" data-scope="service" data-id="method">
+            <label for="c-method">Comments on this section</label>
+            <textarea id="c-method" placeholder="Your notes, edits, or vetoes."></textarea>
+          </div>
+        </div>
+        <div class="mock">
+          <div class="chip">Method Mock</div>
+          <div class="funnel">
+            <div>01 · Identify — 20B signals / wk</div>
+            <div>02 · Score — Bombora topics</div>
+            <div>03 · Activate — Meta + DSP sync</div>
+            <div>04 · Refresh — every 7 days</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="num">iii.</div>
+        <div class="body">
+          <h3>The Offer — Trial Pack → Retainer</h3>
+          <p>Clear, tiered pricing: $250 trial for 10 exclusive leads, converting into a $750–$1,500/mo retainer based on volume. Everything above the fold is the $250 offer; the retainer tiers sit below with an ROI calculator so the agent can see that a single closed final-expense policy at $400–$600 commission pays for the month.</p>
+          <div class="meta-row">
+            <span class="tag">Pricing table</span>
+            <span class="tag">ROI calc</span>
+            <span class="tag">One-click trial</span>
+          </div>
+          <div class="comment-block" data-scope="service" data-id="offer">
+            <label for="c-offer">Comments on this section</label>
+            <textarea id="c-offer" placeholder="Your notes, edits, or vetoes."></textarea>
+          </div>
+        </div>
+        <div class="mock">
+          <div class="chip">Offer Mock</div>
+          <div style="margin-bottom:8px;">Trial · <span class="hl">$250</span></div>
+          <div class="big">10 leads</div>
+          <div style="opacity:.7;">Close 1 = 3.2× ROI</div>
+          <div style="margin-top:14px;border-top:1px dashed rgba(244,239,230,.2);padding-top:10px;">
+            Starter · $750 / 30 lds<br/>
+            Growth · $1,000 / 45 lds<br/>
+            Premium · <span class="hl">$1,500 / 60 lds</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="num">iv.</div>
+        <div class="body">
+          <h3>The Operator — Ethan's Story</h3>
+          <p>Short-form video, below the offer. Ethan on camera: three minutes on the Codified run, the Roofer Domination lesson, and why final-expense is the vertical now. This is the social proof for a page with no client logos yet. The agent needs to feel they're buying a person, not a site.</p>
+          <div class="meta-row">
+            <span class="tag">Video first</span>
+            <span class="tag">Below-fold</span>
+            <span class="tag">Personal brand</span>
+          </div>
+          <div class="comment-block" data-scope="service" data-id="operator">
+            <label for="c-operator">Comments on this section</label>
+            <textarea id="c-operator" placeholder="Your notes, edits, or vetoes."></textarea>
+          </div>
+        </div>
+        <div class="mock">
+          <div class="chip">Operator Mock</div>
+          <div style="aspect-ratio:16/9;background:rgba(227,184,101,.1);display:flex;align-items:center;justify-content:center;border:1px solid rgba(227,184,101,.3);">
+            <span class="hl" style="font-size:20px;">▶ 03:12</span>
+          </div>
+          <div style="margin-top:10px;opacity:.7;">"I was #2 of 1,500."</div>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="num">v.</div>
+        <div class="body">
+          <h3>The Delivery Engine — Team &amp; Tooling</h3>
+          <p>A transparent look at <em>how</em> we fulfill: Ad Prakash's team at Task Minions (55+ in India) for media buying, Rashid in Pakistan as alternate, certified VAs for phone follow-up, ArkData for identity resolution. Not a hero section — a trust section. Agents who've been burned want to see the machine before they wire money.</p>
+          <div class="meta-row">
+            <span class="tag">Team cards</span>
+            <span class="tag">Stack diagram</span>
+            <span class="tag">Optional video</span>
+          </div>
+          <div class="comment-block" data-scope="service" data-id="delivery">
+            <label for="c-delivery">Comments on this section</label>
+            <textarea id="c-delivery" placeholder="Your notes, edits, or vetoes."></textarea>
+          </div>
+        </div>
+        <div class="mock">
+          <div class="chip">Delivery Mock</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+            <div style="border:1px solid rgba(227,184,101,.3);padding:8px;">IN · Media<br/><span class="hl">55+</span></div>
+            <div style="border:1px solid rgba(227,184,101,.3);padding:8px;">PK · Ads<br/><span class="hl">Alt</span></div>
+            <div style="border:1px solid rgba(227,184,101,.3);padding:8px;">PH · VA<br/><span class="hl">24/7</span></div>
+            <div style="border:1px solid rgba(227,184,101,.3);padding:8px;">US · Sales<br/><span class="hl">EH</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ IV — PHASE 1 FLORIDA ═════════════════ -->
+<section class="block dark" id="phase1">
+  <div class="wrap">
+    <div class="section-label"><span class="dot"></span><span>IV · Phase 1 · Florida · Final Expense</span></div>
+    <h2>Why final-expense is the <em>only</em> vertical worth shipping first.</h2>
+    <p class="lede">Year-round demand, agents already pay for leads, B2C targeting is unambiguous, and a single closed policy pays back the month. Medicare is bigger — but seasonal. Home insurance is urgent — but operationally heavier. Final expense is the shortest path from $0 to ten retained agents.</p>
+
+    <div class="callouts">
+      <div class="callout">
+        <div class="n">$400–$600</div>
+        <div class="lbl">Agent commission per closed final-expense policy</div>
+      </div>
+      <div class="callout">
+        <div class="n">3.2×</div>
+        <div class="lbl">Trial ROI if agent closes just one policy from 10 leads</div>
+      </div>
+      <div class="callout">
+        <div class="n">~$100</div>
+        <div class="lbl">Blended CPA to acquire one retained agent client</div>
+      </div>
+      <div class="callout">
+        <div class="n">$4.5K–$6K</div>
+        <div class="lbl">Six-month LTV per retained agent</div>
+      </div>
+    </div>
+
+    <hr class="rule" />
+
+    <div class="two-col">
+      <div>
+        <h3 style="font-size:22px;color:var(--gold-bright);">B2C Targeting (the consumer)</h3>
+        <table class="table">
+          <tr><th>Parameter</th><th>Value</th></tr>
+          <tr><td>Age</td><td class="num">50–85</td></tr>
+          <tr><td>Income</td><td class="num">$20K–$60K HH</td></tr>
+          <tr><td>Geography</td><td>FL · statewide · metro bias</td></tr>
+          <tr><td>Intent</td><td>burial, funeral, senior life, final expense quotes</td></tr>
+          <tr><td>Housing</td><td>renters + homeowners</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3 style="font-size:22px;color:var(--gold-bright);">B2B Acquisition (the agent)</h3>
+        <table class="table">
+          <tr><th>Channel</th><th>Est. CPA</th></tr>
+          <tr><td>Meta (interest + hashed list)</td><td class="num">$75–$150</td></tr>
+          <tr><td>Intent + display retargeting</td><td class="num">$80–$175</td></tr>
+          <tr><td>LinkedIn (IMO/agency owners)</td><td class="num">$150–$300</td></tr>
+          <tr><td>FB groups / organic</td><td class="num">$20–$50</td></tr>
+          <tr><td>Referral ($50–$100 bounty)</td><td class="num">$30–$75</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="comment-block" data-scope="phase1" data-id="phase1-feedback">
+      <label for="c-phase1">Comments on the Phase 1 plan</label>
+      <textarea id="c-phase1" placeholder="e.g. Swap geography to Tampa-only for month one. Or: add ACA from day one."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ V — PRICING DEEP DIVE ═════════════════ -->
+<section class="block light paper" id="pricing">
+  <div class="wrap">
+    <div class="section-label"><span class="dot"></span><span>V · Pricing &amp; Unit Economics</span></div>
+    <h2>Entry offer that <em>sells itself</em>. Retainer that sticks.</h2>
+    <p class="lede">The trial pack takes the purchase decision off the table — an agent doesn't debate $250. Quality sells quality. Anything above 1 closed policy in the trial converts them to a retainer almost without a sales call.</p>
+
+    <table class="table">
+      <tr>
+        <th>Package</th>
+        <th>Monthly price</th>
+        <th>Lead volume</th>
+        <th>Best for</th>
+      </tr>
+      <tr class="featured">
+        <td><strong>Trial Pack</strong></td>
+        <td class="num">$250 one-time</td>
+        <td class="num">10 exclusive leads</td>
+        <td>New agent onboarding · proof of quality</td>
+      </tr>
+      <tr>
+        <td><strong>Starter</strong></td>
+        <td class="num">$750 / mo</td>
+        <td class="num">~30 / mo</td>
+        <td>Solo agents · part-time producers</td>
+      </tr>
+      <tr>
+        <td><strong>Growth</strong></td>
+        <td class="num">$1,000 / mo</td>
+        <td class="num">~45 / mo</td>
+        <td>Full-time agents · consistent closers</td>
+      </tr>
+      <tr>
+        <td><strong>Premium</strong></td>
+        <td class="num">$1,500 / mo</td>
+        <td class="num">~60 / mo</td>
+        <td>Top producers · small agencies</td>
+      </tr>
+    </table>
+
+    <hr class="rule" style="opacity:.4;" />
+
+    <h3 style="font-size:22px;">Scaling math</h3>
+    <table class="table">
+      <tr>
+        <th>Agents</th>
+        <th>Monthly revenue</th>
+        <th>Monthly COGS</th>
+        <th>Monthly gross profit</th>
+      </tr>
+      <tr><td class="num">10</td><td class="num">$7,500–$10,000</td><td class="num">$2,000–$4,000</td><td class="num">$4,500–$7,000</td></tr>
+      <tr class="featured"><td class="num">25</td><td class="num">$18,750–$25,000</td><td class="num">$5,000–$10,000</td><td class="num">$11,250–$17,500</td></tr>
+      <tr><td class="num">50</td><td class="num">$37,500–$50,000</td><td class="num">$10,000–$20,000</td><td class="num">$22,500–$35,000</td></tr>
+      <tr><td class="num">100</td><td class="num">$75,000–$100,000</td><td class="num">$20,000–$40,000</td><td class="num">$45,000–$70,000</td></tr>
+    </table>
+
+    <div class="comment-block" data-scope="pricing" data-id="pricing-feedback">
+      <label for="c-pricing">Comments on pricing</label>
+      <textarea id="c-pricing" placeholder="e.g. Move trial to $99 for friction. Or: make Premium $2K — we're underselling."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ VI — VERTICAL ROLLOUT ═════════════════ -->
+<section class="block deep-warm paper" id="rollout">
+  <div class="wrap">
+    <div class="section-label"><span class="dot"></span><span>VI · The Vertical Rollout</span></div>
+    <h2>Something is <em>always</em> in season.</h2>
+    <p class="lede">The strategy isn't to pick one vertical and hope. It's to stack verticals so that agent clients acquired in Phase 1 are natural upsells into Phase 2, 3, and 4 — and to ride seasonal spikes (AEP, hurricane, OEP) without ever having a quiet quarter.</p>
+
+    <div class="timeline">
+      <div class="phase now">
+        <div class="p-num">Phase 1 · Now</div>
+        <div class="p-title">Final Expense</div>
+        <div class="p-desc">Year-round demand, proven lead culture, fastest proof of concept.</div>
+      </div>
+      <div class="phase">
+        <div class="p-num">Phase 2 · Mo 2–3</div>
+        <div class="p-title">Home &amp; Flood</div>
+        <div class="p-desc">Florida-specific urgency. Hurricane season starts June. Citizens crisis = urgency.</div>
+      </div>
+      <div class="phase">
+        <div class="p-num">Phase 3 · Q4</div>
+        <div class="p-title">Medicare (AEP)</div>
+        <div class="p-desc">Oct 15 start. Massive agent spend window. Stack onto existing FE book.</div>
+      </div>
+      <div class="phase">
+        <div class="p-num">Phase 4 · Ongoing</div>
+        <div class="p-title">Auto &amp; ACA</div>
+        <div class="p-desc">Volume plays. Fills capacity, diversifies revenue base.</div>
+      </div>
+      <div class="phase">
+        <div class="p-num">Phase 5 · When ready</div>
+        <div class="p-title">Commercial &amp; Annuities</div>
+        <div class="p-desc">Premium upsell for top agents. Highest per-lead price, stickiest LTV.</div>
+      </div>
+    </div>
+
+    <div class="comment-block" data-scope="rollout" data-id="rollout-feedback">
+      <label for="c-rollout">Comments on the rollout</label>
+      <textarea id="c-rollout" placeholder="e.g. Bring Medicare forward to Phase 2. Or: skip ACA entirely."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ VII — ASSUMPTIONS ═════════════════ -->
+<section class="block light paper" id="assumptions">
+  <div class="wrap">
+    <div class="section-label"><span class="dot"></span><span>VII · Assumptions to Validate</span></div>
+    <h2>Every one of these is a <em>guess</em>. Edit them in place.</h2>
+    <p class="lede">These are the calls baked into the proposal above. If any one is wrong, the plan underneath it changes. Type your correction into the field. Empty = accepted.</p>
+
+    <div class="assumptions">
+      <div class="assumption">
+        <div class="idx">i</div>
+        <div class="body">
+          <div class="label">Assumption 01 · Vertical</div>
+          <div class="original"><strong>Final Expense Life Insurance</strong> is the first vertical and we don't split focus for the first 60 days.</div>
+          <textarea class="edit" data-assumption-id="a01-vertical" placeholder="Edit — or leave empty to accept"></textarea>
+          <div class="hint">If wrong: everything in §III–§VI shifts</div>
+        </div>
+      </div>
+
+      <div class="assumption">
+        <div class="idx">ii</div>
+        <div class="body">
+          <div class="label">Assumption 02 · Geography</div>
+          <div class="original"><strong>Florida only</strong> for the first 90 days — statewide, with metro concentration (Tampa, Miami, Orlando, Jacksonville).</div>
+          <textarea class="edit" data-assumption-id="a02-geography" placeholder="Edit — or leave empty to accept"></textarea>
+          <div class="hint">If wrong: media buys and creative dialect change</div>
+        </div>
+      </div>
+
+      <div class="assumption">
+        <div class="idx">iii</div>
+        <div class="body">
+          <div class="label">Assumption 03 · Entry offer</div>
+          <div class="original"><strong>$250 trial pack → $750–$1,500/mo retainer.</strong> Trial is the no-brainer. Retainer tier depends on lead volume.</div>
+          <textarea class="edit" data-assumption-id="a03-offer" placeholder="Edit — or leave empty to accept"></textarea>
+          <div class="hint">If wrong: ROI framing and checkout rewrite</div>
+        </div>
+      </div>
+
+      <div class="assumption">
+        <div class="idx">iv</div>
+        <div class="body">
+          <div class="label">Assumption 04 · Delivery partners</div>
+          <div class="original">Media buying runs through <strong>Ad Prakash / Task Minions</strong> as primary with <strong>Rashid</strong> as alternate. Both get case-study review on Tuesday before going live.</div>
+          <textarea class="edit" data-assumption-id="a04-delivery" placeholder="Edit — or leave empty to accept"></textarea>
+          <div class="hint">If wrong: team section &amp; SLA math change</div>
+        </div>
+      </div>
+
+      <div class="assumption">
+        <div class="idx">v</div>
+        <div class="body">
+          <div class="label">Assumption 05 · Data stack</div>
+          <div class="original"><strong>ArkData + ListMagic are the exclusive intent-data layer</strong> for HMS campaigns. Shaw takes a referral share on accounts HMS closes using the data.</div>
+          <textarea class="edit" data-assumption-id="a05-data" placeholder="Edit — or leave empty to accept"></textarea>
+          <div class="hint">If wrong: re-paper commercials</div>
+        </div>
+      </div>
+
+      <div class="assumption">
+        <div class="idx">vi</div>
+        <div class="body">
+          <div class="label">Assumption 06 · Brand positioning</div>
+          <div class="original">HMS is a <strong>hybrid personal + company brand</strong> — Ethan's face is above the fold, but the buyer contracts with an entity, not a person.</div>
+          <textarea class="edit" data-assumption-id="a06-brand" placeholder="Edit — or leave empty to accept"></textarea>
+          <div class="hint">If wrong: contract template &amp; site photography change</div>
+        </div>
+      </div>
+
+      <div class="assumption">
+        <div class="idx">vii</div>
+        <div class="body">
+          <div class="label">Assumption 07 · Long-term vision</div>
+          <div class="original">The <strong>end state is an actual insurance agency</strong>. Ethan gets licensed, takes overrides, and HMS converts from lead vendor to carrier-appointed producer within 12 months.</div>
+          <textarea class="edit" data-assumption-id="a07-vision" placeholder="Edit — or leave empty to accept"></textarea>
+          <div class="hint">If wrong: compliance &amp; corp structure change</div>
+        </div>
+      </div>
+
+      <div class="assumption">
+        <div class="idx">viii</div>
+        <div class="body">
+          <div class="label">Assumption 08 · Domain</div>
+          <div class="original">Primary domain is <strong>hamiltonmarketing.co</strong> (fallback: hamiltonmarketingservices.com). HMS is the public mark.</div>
+          <textarea class="edit" data-assumption-id="a08-domain" placeholder="Edit — or leave empty to accept"></textarea>
+          <div class="hint">If wrong: rebuild favicon, social, OG tags</div>
+        </div>
+      </div>
+
+      <div class="assumption">
+        <div class="idx">ix</div>
+        <div class="body">
+          <div class="label">Assumption 09 · Call-to-action</div>
+          <div class="original">Primary CTA on the site is <strong>"Claim the $250 Trial"</strong>. Secondary is "Book a 15-min strategy call" via Calendly.</div>
+          <textarea class="edit" data-assumption-id="a09-cta" placeholder="Edit — or leave empty to accept"></textarea>
+          <div class="hint">If wrong: funnel and CRM wiring change</div>
+        </div>
+      </div>
+
+      <div class="assumption">
+        <div class="idx">x</div>
+        <div class="body">
+          <div class="label">Assumption 10 · Timeline</div>
+          <div class="original">Full site goes live <strong>within 72 hours of your sign-off</strong> on this proposal. First Meta campaign follows within 5 days.</div>
+          <textarea class="edit" data-assumption-id="a10-timeline" placeholder="Edit — or leave empty to accept"></textarea>
+          <div class="hint">If wrong: reshape the sprint</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ NOTES + SUBMIT ═════════════════ -->
+<section class="block dark" id="submit">
+  <div class="wrap">
+    <div class="section-label"><span class="dot"></span><span>VIII · Everything else</span></div>
+    <h2>Anything that <em>wasn't</em> above — put it here.</h2>
+    <p class="lede">Free-form. Brand ideas, agent objections I haven't heard, partners you want in, competitors you'd benchmark against, things you hate. The more the better.</p>
+
+    <div class="notes-area">
+      <textarea id="notes" placeholder="Your open notes. Nothing is too rough — this is the working draft."></textarea>
+    </div>
+
+    <div class="submit-wrap">
+      <button class="submit" id="submitBtn" type="button">Submit feedback · build the site</button>
+      <div class="submit-note">Clicking this sends every comment, every edited assumption, and these notes straight to Shaw. The full site gets built on your feedback.</div>
+    </div>
+
+    <div class="confirm" id="confirm">
+      <em>Received.</em> Shaw has been notified. The full site gets built on your feedback — you'll get the live URL by Telegram the moment it's deployed.
+      <span class="small" id="confirmDetail">Submission ID: —</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div>Hamilton Marketing Services · Proposal №. 01 · April 2026</div>
+      <div>A Shaw Cole / ArkData working document</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Staggered reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: .15 });
+  document.querySelectorAll('.svc, .assumption, .callout, .phase, .type-specimen, .founder, .timeline, .table').forEach(el => {
+    el.classList.add('reveal'); io.observe(el);
+  });
+
+  // Collect + submit
+  const btn = document.getElementById('submitBtn');
+  const confirmEl = document.getElementById('confirm');
+  const confirmDetail = document.getElementById('confirmDetail');
+
+  function collect() {
+    const payload = {
+      submitted_at: new Date().toISOString(),
+      submission_id: 'hamilton-' + Math.random().toString(36).slice(2, 10),
+      proposed_changes: [],
+      assumptions: [],
+      additional_notes: document.getElementById('notes').value.trim(),
+    };
+    document.querySelectorAll('.comment-block').forEach(block => {
+      const ta = block.querySelector('textarea');
+      const id = block.dataset.id;
+      const scope = block.dataset.scope;
+      const val = (ta?.value || '').trim();
+      if (val) payload.proposed_changes.push({ id, scope, comment: val });
+    });
+    document.querySelectorAll('textarea.edit').forEach(ta => {
+      const id = ta.dataset.assumptionId;
+      const original = ta.closest('.assumption')?.querySelector('.original')?.innerText.trim() || '';
+      const edited = ta.value.trim();
+      payload.assumptions.push({ id, original, edited });
+    });
+    return payload;
+  }
+
+  btn.addEventListener('click', async () => {
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    const payload = collect();
+    try {
+      const r = await fetch('/.netlify/functions/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+    } catch (err) {
+      console.error(err);
+    }
+    try { localStorage.setItem('hamilton_last_submission', JSON.stringify(payload)); } catch {}
+    confirmDetail.textContent = 'Submission ID: ' + payload.submission_id;
+    confirmEl.classList.add('show');
+    btn.textContent = 'Received';
+    confirmEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+
+</body>
+</html>
