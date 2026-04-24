@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Final Expense Coverage from $24/mo · Florida Seniors</title>
+<meta name="description" content="Affordable burial coverage for Florida seniors. No medical exam. Rates lock in. Get your personalized quote in 60 seconds." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #0B1A36; --navy-soft: #132746;
+    --gold: #C9A55B; --gold-bright: #E3B865; --gold-deep: #9B7E3F;
+    --paper: #F4EFE6; --paper-warm: #ECE4D3;
+    --ink: #0B1A36; --muted: #5C5C5C; --ok: #4FAE6F;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 18px; line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+  @media (max-width: 640px) { .wrap { padding: 0 18px; } }
+
+  /* Trust ribbon */
+  .trust-bar {
+    background: var(--navy); color: var(--paper); padding: 10px 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .15em; text-transform: uppercase;
+  }
+  .trust-bar .wrap {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 14px; flex-wrap: wrap;
+  }
+  .trust-bar .item { display: inline-flex; align-items: center; gap: 8px; }
+  .trust-bar .item::before {
+    content: "✓"; color: var(--gold-bright); font-weight: 700;
+  }
+
+  /* Agent header */
+  .agent-head {
+    padding: 22px 0 18px; border-bottom: 1px solid rgba(11,26,54,.15);
+    display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap;
+  }
+  .agent-identity {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .agent-headshot {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: var(--navy); color: var(--gold-bright);
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Fraunces", serif; font-weight: 400; font-style: italic;
+    font-size: 28px;
+    border: 2px solid var(--gold);
+  }
+  .agent-info { line-height: 1.3; }
+  .agent-info .name {
+    font-family: "Fraunces", serif; font-weight: 500; font-size: 22px;
+    letter-spacing: -0.01em;
+  }
+  .agent-info .title {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .15em; text-transform: uppercase;
+    color: var(--muted); margin-top: 3px;
+  }
+  .agent-head .call-now {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--navy); padding: 12px 18px;
+    border: 1px solid var(--navy); border-radius: 2px;
+    text-decoration: none; transition: background .2s;
+  }
+  .agent-head .call-now:hover { background: var(--navy); color: var(--paper); }
+  .agent-head .call-now .num {
+    display: block; font-size: 16px; letter-spacing: .04em;
+    text-transform: none; color: var(--navy); font-weight: 500; margin-top: 2px;
+  }
+  .agent-head .call-now:hover .num { color: var(--paper); }
+
+  /* HERO */
+  .hero {
+    padding: 64px 0 72px;
+    background: linear-gradient(180deg, var(--paper) 0%, var(--paper-warm) 100%);
+    position: relative;
+  }
+  .hero .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--gold-deep); margin-bottom: 18px;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .hero .eyebrow::before {
+    content: ""; width: 24px; height: 1px; background: var(--gold);
+  }
+  .hero h1 {
+    font-family: "Fraunces", serif; font-weight: 400;
+    font-size: clamp(40px, 6vw, 68px); line-height: 1.04; letter-spacing: -0.022em;
+    margin: 0 0 24px; max-width: 820px;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold-deep); font-weight: 400; }
+  .hero p.sub {
+    font-size: 20px; max-width: 680px; color: var(--ink); margin: 0 0 40px;
+    line-height: 1.55;
+  }
+  .hero .hero-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px;
+    align-items: start;
+  }
+  @media (max-width: 900px) { .hero .hero-grid { grid-template-columns: 1fr; gap: 28px; } }
+
+  /* Feature list */
+  .features { list-style: none; padding: 0; margin: 0 0 32px; }
+  .features li {
+    padding: 12px 0; border-bottom: 1px dashed rgba(11,26,54,.15);
+    font-size: 17px; display: grid; grid-template-columns: 26px 1fr; gap: 10px;
+  }
+  .features li:last-child { border-bottom: none; }
+  .features li::before {
+    content: "✓"; color: var(--ok); font-weight: 700; font-size: 18px;
+  }
+  .features strong { font-weight: 600; color: var(--navy); }
+
+  /* Quote form */
+  .quote-card {
+    background: var(--paper); border: 1px solid var(--gold);
+    padding: 36px 32px; border-radius: 2px;
+    box-shadow: 0 20px 60px -30px rgba(11,26,54,.3);
+  }
+  .quote-card h2 {
+    font-family: "Fraunces", serif; font-weight: 500;
+    font-size: 26px; margin: 0 0 6px; letter-spacing: -0.01em;
+  }
+  .quote-card h2 em { font-style: italic; color: var(--gold-deep); }
+  .quote-card .note {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 24px;
+  }
+  .quote-card label {
+    display: block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--gold-deep); margin-bottom: 6px;
+  }
+  .quote-card input, .quote-card select {
+    width: 100%; padding: 14px 16px; margin-bottom: 18px;
+    border: 1px solid rgba(11,26,54,.2); background: #FBF8F1;
+    color: var(--ink);
+    font-family: "IBM Plex Sans", sans-serif; font-size: 17px;
+    border-radius: 2px;
+  }
+  .quote-card input:focus, .quote-card select:focus {
+    outline: none; border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,165,91,.22);
+  }
+  .quote-card .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 420px) { .quote-card .row { grid-template-columns: 1fr; } }
+  .quote-card button {
+    width: 100%; padding: 18px;
+    background: var(--navy); color: var(--gold-bright);
+    border: none; border-radius: 2px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px; letter-spacing: .22em; text-transform: uppercase;
+    font-weight: 600; cursor: pointer;
+    margin-top: 8px;
+    transition: background .2s, transform .1s;
+  }
+  .quote-card button:hover { background: #152845; }
+  .quote-card button:active { transform: translateY(1px); }
+  .quote-card .fine {
+    margin-top: 14px; font-size: 12px; color: var(--muted); line-height: 1.5;
+  }
+
+  /* Confirmation */
+  .quote-confirm {
+    display: none; margin-top: 20px; padding: 20px 22px;
+    background: rgba(79,174,111,.12); border: 1px solid var(--ok);
+    font-size: 15px; line-height: 1.5; border-radius: 2px; color: var(--ink);
+  }
+  .quote-confirm.show { display: block; }
+  .quote-confirm strong { color: var(--ok); }
+
+  /* Section spacer */
+  section.blk { padding: 70px 0; }
+  section.blk.light { background: var(--paper); }
+  section.blk.warm { background: var(--paper-warm); }
+  section.blk.dark { background: var(--navy); color: var(--paper); }
+
+  /* Pricing teaser */
+  .pricing-teaser {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+    margin-top: 34px;
+  }
+  @media (max-width: 720px) { .pricing-teaser { grid-template-columns: repeat(2, 1fr); } }
+  .pricing-teaser .cell {
+    padding: 20px 22px; background: #FBF8F1; border: 1px solid rgba(11,26,54,.12);
+    text-align: center;
+  }
+  .pricing-teaser .coverage {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--gold-deep); margin-bottom: 10px;
+  }
+  .pricing-teaser .rate {
+    font-family: "Fraunces", serif; font-weight: 400;
+    font-size: 32px; line-height: 1; letter-spacing: -0.01em;
+    color: var(--navy);
+  }
+  .pricing-teaser .per {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; margin-top: 6px; color: var(--muted); letter-spacing: .08em;
+  }
+
+  .lbl {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--gold-deep); margin-bottom: 18px;
+    display: inline-flex; align-items: baseline; gap: 14px;
+  }
+  .lbl .dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; display: inline-block; transform: translateY(-2px); }
+  .dark .lbl { color: var(--gold-bright); }
+  h2 {
+    font-family: "Fraunces", serif; font-weight: 400;
+    font-size: clamp(30px, 4vw, 46px); line-height: 1.05; letter-spacing: -0.018em;
+    margin: 0 0 16px;
+  }
+  h2 em { font-style: italic; color: var(--gold-deep); font-weight: 400; }
+  .dark h2 em { color: var(--gold-bright); }
+  p.lede { font-size: 18px; max-width: 720px; margin: 0 0 0; }
+  .dark p.lede { color: rgba(244,239,230,.85); }
+
+  /* Testimonial band */
+  .testi {
+    margin-top: 38px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  }
+  @media (max-width: 820px) { .testi { grid-template-columns: 1fr; } }
+  .testi .t {
+    padding: 24px 26px; border: 1px solid rgba(227,184,101,.3);
+    background: rgba(244,239,230,.04); border-radius: 2px;
+  }
+  .testi .t blockquote {
+    margin: 0 0 14px; font-family: "Fraunces", serif; font-weight: 400;
+    font-style: italic; font-size: 17px; line-height: 1.5; color: var(--paper);
+  }
+  .testi .t .who {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--gold-bright);
+  }
+
+  /* FAQ */
+  .faq { margin-top: 38px; max-width: 820px; }
+  .faq .q {
+    padding: 20px 0; border-bottom: 1px solid rgba(11,26,54,.15);
+  }
+  .faq .q summary {
+    cursor: pointer; list-style: none;
+    font-family: "Fraunces", serif; font-weight: 500; font-size: 20px;
+    letter-spacing: -0.01em; padding-right: 36px; position: relative;
+  }
+  .faq .q summary::after {
+    content: "+"; position: absolute; right: 0; top: 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 22px; color: var(--gold-deep); transition: transform .2s;
+  }
+  .faq .q[open] summary::after { transform: rotate(45deg); }
+  .faq .q summary::-webkit-details-marker { display: none; }
+  .faq .q .a {
+    margin-top: 10px; font-size: 16px; line-height: 1.6; color: var(--muted);
+  }
+
+  footer {
+    padding: 32px 0 48px; background: var(--navy); color: rgba(244,239,230,.6);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px; letter-spacing: .14em; line-height: 1.6; text-transform: uppercase;
+  }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+  footer .disclosure { max-width: 720px; text-transform: none; letter-spacing: .02em; font-family: "IBM Plex Sans", sans-serif; font-size: 11px; color: rgba(244,239,230,.55); line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<div class="trust-bar">
+  <div class="wrap">
+    <span class="item">A+ Rated carriers</span>
+    <span class="item">No medical exam</span>
+    <span class="item">Rate locked in</span>
+    <span class="item">Licensed in FL</span>
+  </div>
+</div>
+
+<!-- Agent header -->
+<div class="wrap">
+  <div class="agent-head">
+    <div class="agent-identity">
+      <div class="agent-headshot" id="agentHeadshot">JD</div>
+      <div class="agent-info">
+        <div class="name" id="agentName">Jane Doe</div>
+        <div class="title"><span id="agentTitle">Florida Final Expense Specialist · Licensed #W123456</span></div>
+      </div>
+    </div>
+    <a class="call-now" href="tel:+18005551212">
+      <span>Call directly</span>
+      <span class="num" id="agentPhone">(800) 555-1212</span>
+    </a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Florida seniors · Ages 50–85</div>
+        <h1>Burial coverage starting at <em>$24/month</em>. No medical exam.</h1>
+        <p class="sub">
+          Protect your family from the one expense nobody plans for. Get a locked-in rate in under a minute — no waiting on a nurse, no blood draw, no surprise decline. <strong id="agentFirstName2">Jane</strong> handles the application personally and walks you through every line.
+        </p>
+        <ul class="features">
+          <li><strong>Coverage from $5,000 to $35,000</strong> — choose what fits your budget.</li>
+          <li><strong>Approval in minutes, not weeks</strong> — guaranteed and simplified issue options.</li>
+          <li><strong>Rate locked for life</strong> — never increases after issue.</li>
+          <li><strong>Paid directly to your family</strong> — not held up by probate.</li>
+          <li><strong>A+ rated carriers only</strong> — Mutual of Omaha, Gerber, Aetna, and more.</li>
+        </ul>
+
+        <div class="pricing-teaser">
+          <div class="cell">
+            <div class="coverage">$10,000</div>
+            <div class="rate">$24<span style="font-size:17px;">/mo</span></div>
+            <div class="per">Age 62 · Non-smoker</div>
+          </div>
+          <div class="cell">
+            <div class="coverage">$15,000</div>
+            <div class="rate">$38<span style="font-size:17px;">/mo</span></div>
+            <div class="per">Age 65 · Non-smoker</div>
+          </div>
+          <div class="cell">
+            <div class="coverage">$20,000</div>
+            <div class="rate">$56<span style="font-size:17px;">/mo</span></div>
+            <div class="per">Age 68 · Non-smoker</div>
+          </div>
+          <div class="cell">
+            <div class="coverage">$25,000</div>
+            <div class="rate">$79<span style="font-size:17px;">/mo</span></div>
+            <div class="per">Age 72 · Non-smoker</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-card">
+        <h2>Get <em>your</em> exact rate</h2>
+        <div class="note">60 seconds · No credit check · No obligation</div>
+        <form id="quoteForm">
+          <div class="row">
+            <div>
+              <label for="q-first">First name</label>
+              <input id="q-first" type="text" required placeholder="Your first name" />
+            </div>
+            <div>
+              <label for="q-last">Last name</label>
+              <input id="q-last" type="text" required placeholder="Your last name" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="q-age">Age</label>
+              <select id="q-age" required>
+                <option value="">Select…</option>
+                <option>50–54</option><option>55–59</option><option>60–64</option>
+                <option>65–69</option><option>70–74</option><option>75–79</option>
+                <option>80–85</option>
+              </select>
+            </div>
+            <div>
+              <label for="q-tobacco">Tobacco?</label>
+              <select id="q-tobacco" required>
+                <option value="">Select…</option>
+                <option>No</option><option>Yes</option>
+              </select>
+            </div>
+          </div>
+          <label for="q-coverage">Coverage amount</label>
+          <select id="q-coverage" required>
+            <option value="">Choose…</option>
+            <option>$5,000</option><option>$10,000</option><option>$15,000</option>
+            <option>$20,000</option><option>$25,000</option><option>$30,000+</option>
+          </select>
+          <label for="q-zip">ZIP code</label>
+          <input id="q-zip" type="text" required pattern="[0-9]{5}" placeholder="33101" />
+          <label for="q-phone">Phone</label>
+          <input id="q-phone" type="tel" required placeholder="(555) 555-1212" />
+          <label for="q-email">Email</label>
+          <input id="q-email" type="email" required placeholder="you@example.com" />
+          <button type="submit">Show my rate</button>
+          <div class="fine">By clicking, you agree <span id="agentFirstName3">Jane</span> may contact you at the number above regarding your quote. Your information is not sold.</div>
+          <div class="quote-confirm" id="quoteConfirm">
+            <strong>Got it.</strong> <span id="agentFirstName4">Jane</span> will personally reach out within 2 business hours. Check your phone and email — we'll also text you a summary.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="blk warm">
+  <div class="wrap">
+    <div class="lbl"><span class="dot"></span><span>How it works</span></div>
+    <h2>Three steps. One <em>short</em> phone call.</h2>
+    <p class="lede">No in-person meeting. No paperwork piled up. <span id="agentFirstName5">Jane</span> calls you back, asks a few health questions, submits the application, and the policy is usually issued the same day.</p>
+    <div class="pricing-teaser" style="margin-top:42px;">
+      <div class="cell"><div class="coverage">01</div><div class="rate" style="font-size:20px;">Get your rate</div><div class="per" style="margin-top:8px;">Form above · 60 seconds</div></div>
+      <div class="cell"><div class="coverage">02</div><div class="rate" style="font-size:20px;">Short phone call</div><div class="per" style="margin-top:8px;">15 minutes · health Qs · confirm coverage</div></div>
+      <div class="cell"><div class="coverage">03</div><div class="rate" style="font-size:20px;">Policy issued</div><div class="per" style="margin-top:8px;">Same day · locked rate · e-signed</div></div>
+      <div class="cell"><div class="coverage">04</div><div class="rate" style="font-size:20px;">Paid directly</div><div class="per" style="margin-top:8px;">Tax-free to your family, within days</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="blk dark">
+  <div class="wrap">
+    <div class="lbl"><span class="dot"></span><span>What clients say</span></div>
+    <h2>Real Florida families. Real <em>peace of mind.</em></h2>
+    <div class="testi">
+      <div class="t">
+        <blockquote>"I didn't want to leave a bill behind for my kids. <span id="agentFirstName6">Jane</span> made it so simple — I was on the phone for 12 minutes and the policy was mine."</blockquote>
+        <div class="who">Margaret P. · Tampa · Age 68</div>
+      </div>
+      <div class="t">
+        <blockquote>"I'd been declined by AARP for my diabetes. <span id="agentFirstName7">Jane</span> got me a $15K guaranteed-issue policy for $58 a month. She knew exactly what carrier to use."</blockquote>
+        <div class="who">Robert T. · Orlando · Age 72</div>
+      </div>
+      <div class="t">
+        <blockquote>"Rate locked for life was the big thing. My husband's policy from 2019 never went up, so I finally got mine. Cheaper than I thought."</blockquote>
+        <div class="who">Diana M. · Jacksonville · Age 65</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="blk light">
+  <div class="wrap">
+    <div class="lbl"><span class="dot"></span><span>Questions people ask</span></div>
+    <h2>The <em>honest</em> answers.</h2>
+    <div class="faq">
+      <details class="q">
+        <summary>Do I need a medical exam?</summary>
+        <div class="a">No. Every carrier we represent for final expense offers no-exam coverage. Guaranteed-issue policies ask zero health questions. Simplified-issue policies ask a short set — if you answer "no" to all, you're approved.</div>
+      </details>
+      <details class="q">
+        <summary>What does it actually cost?</summary>
+        <div class="a">For most Florida seniors ages 60–75, a $10,000–$15,000 policy runs $24–$58/month. Exact rate depends on age, tobacco, coverage amount, and carrier. The form above gives you a real quote in 60 seconds.</div>
+      </details>
+      <details class="q">
+        <summary>What if I get declined?</summary>
+        <div class="a">If a simplified-issue carrier declines you, we switch to guaranteed-issue — which cannot decline anyone in the eligible age band. You will get a policy.</div>
+      </details>
+      <details class="q">
+        <summary>How fast does my family receive the money?</summary>
+        <div class="a">Typically within 5–10 business days of the carrier receiving the death certificate. Paid directly — never through probate. Some carriers offer expedited payment for funeral home direct-assignment.</div>
+      </details>
+      <details class="q">
+        <summary>Can the rate go up later?</summary>
+        <div class="a">No. Your monthly premium is locked at the rate you sign up at, for the life of the policy. It cannot be raised based on age or health changes.</div>
+      </details>
+      <details class="q">
+        <summary>What carriers do you work with?</summary>
+        <div class="a">Mutual of Omaha, Gerber Life, Aetna, Transamerica, Americo, AIG, Prosperity Life, and more. All A+ rated. <span id="agentFirstName8">Jane</span> shops them for you — we don't force one carrier.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div><span id="agentNameFoot">Jane Doe</span> · Licensed Insurance Producer FL</div>
+      <div style="margin-top:6px;">Powered by Hamilton Marketing Services</div>
+    </div>
+    <div class="disclosure">
+      This is a template for agent-branded landing pages. Live agent data will replace placeholder fields at build time. Insurance products are offered through licensed agents only; coverage, availability, and rates vary by age, health, state, and carrier. Not all applicants qualify for every product. This page is for illustration and compliance review.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Template variable substitution — production will fill from agent record
+  const agent = {
+    name: "Jane Doe",
+    firstName: "Jane",
+    initials: "JD",
+    title: "Florida Final Expense Specialist · Licensed #W123456",
+    phone: "(800) 555-1212",
+  };
+  const url = new URL(window.location.href);
+  if (url.searchParams.get("agent")) {
+    try { Object.assign(agent, JSON.parse(decodeURIComponent(url.searchParams.get("agent")))); } catch {}
+  }
+  const setTxt = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  setTxt("agentHeadshot", agent.initials);
+  setTxt("agentName", agent.name);
+  setTxt("agentTitle", agent.title);
+  setTxt("agentPhone", agent.phone);
+  setTxt("agentNameFoot", agent.name);
+  ["agentFirstName2","agentFirstName3","agentFirstName4","agentFirstName5","agentFirstName6","agentFirstName7","agentFirstName8"].forEach(id => setTxt(id, agent.firstName));
+
+  document.getElementById("quoteForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = {
+      kind: "consumer_quote",
+      agent: agent.name,
+      first: document.getElementById("q-first").value,
+      last: document.getElementById("q-last").value,
+      age: document.getElementById("q-age").value,
+      tobacco: document.getElementById("q-tobacco").value,
+      coverage: document.getElementById("q-coverage").value,
+      zip: document.getElementById("q-zip").value,
+      phone: document.getElementById("q-phone").value,
+      email: document.getElementById("q-email").value,
+      submitted_at: new Date().toISOString(),
+    };
+    try {
+      await fetch("https://hamilton-proposal.netlify.app/.netlify/functions/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ submission_id: "quote-" + Date.now(), proposed_changes: [], assumptions: [], additional_notes: "[Consumer quote from hamilton-fe-quote]\n\n" + JSON.stringify(data, null, 2) }),
+      });
+    } catch {}
+    document.getElementById("quoteConfirm").classList.add("show");
+    document.querySelector("#quoteForm button").disabled = true;
+  });
+</script>
+
+</body>
+</html>
