@@ -473,7 +473,11 @@
     fill.style.width = ((s[1]/max)*100).toFixed(0) + "%";
     bar.appendChild(fill);
     row.appendChild(bar);
-    row.appendChild(el("div", "vol", (s[1]/1000).toFixed(0) + "K"));
+    const v = s[1];
+    const fmt = v >= 1_000_000
+      ? (v / 1_000_000).toFixed(2).replace(/\.?0+$/, "") + "M"
+      : Math.round(v / 1_000) + "K";
+    row.appendChild(el("div", "vol", fmt));
     statesEl.appendChild(row);
   });
 
