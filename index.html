@@ -873,7 +873,7 @@
     </div>
     <h1>One proposal. <em>Three pages.</em> A productized lead machine for final‑expense agents.</h1>
     <div class="kicker">
-      This revision is bigger: we've added the two-layer marketing playbook (we market to agents and on their behalf), embedded a sourced market snapshot of the nationwide final-expense opportunity, pulled a narrowed first-pass list of 26 Florida-based FE agents, mapped Meta and DSP ad sizes to the vertical, and productized your offer into a primary package + add-ons. Submitting feedback below rebuilds this proposal page and deploys two companion landing pages — one for agent acquisition, one branded for each agent's consumer market.
+      This revision is bigger: we've added the two-layer marketing playbook (we market to agents and on their behalf), embedded a sourced market snapshot of the nationwide final-expense opportunity, live-verified a seed list of 13 Florida-based FE agencies (with the path to ~127K via FL DFS), mapped Meta and DSP ad sizes to the vertical, and productized your offer into a primary package + add-ons. Submitting feedback below rebuilds this proposal page and deploys two companion landing pages — one for agent acquisition, one branded for each agent's consumer market.
     </div>
   </div>
   <div class="stamp">Draft 02 · Live rebuild enabled</div>
@@ -1055,35 +1055,35 @@
 <section class="block light paper" id="agents">
   <div class="wrap">
     <div class="section-label"><span class="dot"></span><span>V · The Agents</span></div>
-    <h2>Twenty-six Florida-based final-expense agents. <em>Day one targets.</em></h2>
+    <h2>Thirteen <em>verified</em> Florida-based final-expense agencies. The seed list.</h2>
     <p class="lede">Phase 1 focus is <strong>Florida-based independent agents and agencies</strong>. Technically a non-resident license lets any licensed US agent write FL policies — but for our first sprint we stay FL-based: tighter Meta audience targeting, local trust cues in creative, and in-person backup if a deal ever needs a handshake. Captive Lincoln Heritage agents excluded (they're locked into one carrier and don't buy leads).</p>
 
     <div style="margin-top:28px;padding:16px 20px;background:var(--paper-warm);border-left:3px solid var(--gold);font-size:14px;line-height:1.55;max-width:760px;">
-      <strong>Licensing note.</strong> An agent does <em>not</em> need to live in FL to sell FL final-expense — they need a Florida resident OR non-resident producer license. We're focusing the list on FL-resident agents because (a) they have existing FL books, (b) Meta targeting by advertiser location + audience location matches cleaner, (c) the $250 trial pitch lands harder with local social proof. Layer 2 pitch still works in any state once we expand.
+      <strong>Verification note.</strong> Every URL and phone number below was live-checked on April 25, 2026. An earlier draft contained 12 entries the research agent fabricated (dead domains, invented phones); they've been removed and the lesson is logged. The seed list is small but real — it's the starting point for FL DFS producer-database enrichment, which puts ~127K licensed FL L&amp;H agents within reach.
     </div>
 
     <div class="agent-count">
       <div class="metric">
-        <div class="n">26</div>
-        <div class="lbl">FL-based agents / agencies (narrowed)</div>
+        <div class="n">13</div>
+        <div class="lbl">FL-based agencies · live-verified</div>
       </div>
       <div class="metric">
-        <div class="n">20</div>
-        <div class="lbl">With website + phone verified</div>
+        <div class="n">13</div>
+        <div class="lbl">With working website</div>
       </div>
       <div class="metric">
         <div class="n">12</div>
-        <div class="lbl">FL metros covered</div>
+        <div class="lbl">With verified phone</div>
       </div>
       <div class="metric">
-        <div class="n">500+</div>
-        <div class="lbl">Reachable via FL DFS enrichment (next sprint)</div>
+        <div class="n">127,351</div>
+        <div class="lbl">FL L&amp;H licensees · DFS database (enrichment ceiling)</div>
       </div>
     </div>
 
     <div class="agent-grid" id="agentGrid"></div>
 
-    <div class="agent-overflow">+ 6 more FL agents LinkedIn-sourced (need enrichment) · 97 cross-state candidates in reserve for expansion</div>
+    <div class="agent-overflow">Next sprint · enrich via FL DFS producer database (licenseesearch.fldfs.com) + paid NAIC NPN lookup to reach 500+ licensed FL FE producers</div>
 
     <div class="comment-block" data-scope="agents" data-id="agents-feedback">
       <label for="c-agents">Comments on the agent list</label>
@@ -1543,7 +1543,7 @@
         <div class="idx">x</div>
         <div class="body">
           <div class="label">Assumption 10 · Agent list size</div>
-          <div class="original">Initial B2B list is <strong>26 FL-based FE agents and agencies (captives excluded)</strong>. We enrich to 500+ licensed FL-resident FE producers via FL DFS producer database before scaling ads. Out-of-state agents with non-resident FL licenses added only after Phase 1 proves out.</div>
+          <div class="original">Initial B2B seed list is <strong>13 live-verified FL-based FE agencies (captives excluded)</strong>. We enrich to 500+ licensed FL-resident FE producers via FL DFS producer database (licenseesearch.fldfs.com, ~127K total L&amp;H licensees) before scaling ads. Out-of-state agents with non-resident FL licenses added only after Phase 1 proves out.</div>
           <textarea class="edit" data-assumption-id="a10-list" placeholder="Edit — or leave empty to accept"></textarea>
         </div>
       </div>
@@ -1593,31 +1593,25 @@
 </footer>
 
 <script>
-  // Agent grid — FL-based FE agents only, captives excluded, tiered by data signal.
-  // Pulled from public sources (agency websites, LinkedIn snippets). See data/agents-fl-final-expense.json.
+  // Agent grid — FL-based FE agents. EVERY URL + phone below was live-verified
+  // (HTTP 200 + WebFetch content check) on 2026-04-25. Captives excluded.
+  // 12 entries were dropped from an earlier draft because the URLs returned
+  // DNS-fail / 404 / 502; the LLM that originally compiled the list invented
+  // them. Lesson recorded.
   const AGENTS = [
     ["Tom Phelan","Florida Legacy Advisors","Altamonte Springs, FL","https://www.floridalegacyadvisors.com","(407) 745-4654"],
-    ["Daniel V.","MyPHSS","Tampa, FL","https://myphss.com","813-539-0071"],
+    ["Daniel V.","MyPHSS","Tampa, FL","https://myphss.com","(813) 539-0071"],
     ["J. Ciaccio","Ciaccio Crew Independent Insurance","Tampa, FL","https://www.ciacciocrew.com","(813) 988-3200"],
     ["Mike Bernhardt","First Florida Insurance","Jupiter, FL","https://www.myfirstflorida.com","(561) 962-0077"],
     ["Joe Faulk","Medicare Insurance Agency of Florida","Tampa, FL","https://www.miafla.com","(813) 928-5454"],
     ["Lou Espada","Espada Insurance Agency","Jacksonville, FL","https://www.espadaagency.com","(904) 376-7333"],
-    ["Josh Winter","JW Insurance Group Inc.","Orlando, FL","https://www.jwinsgroup.com","(407) 401-9911"],
-    ["Kathy Blanco","Blanco Agencies","Tampa, FL","https://www.blancoagencies.com","(813) 875-3030"],
-    [null,"Great Oaks Insurance Services","Fort Myers, FL","https://greatoaksinsurance.com","(239) 997-9017"],
-    [null,"Senior Services Insurance Agency","Palm Beach Gardens, FL","https://seniorservicesinsurance.com","(561) 624-2700"],
-    [null,"Franklin Insurance Agency","Tallahassee, FL","https://www.franklininsuranceagency.com","(850) 878-2121"],
-    [null,"Thomas and Associates","Jacksonville, FL","https://www.thomasinsurancejax.com","(904) 268-2999"],
-    [null,"J.E. Insurance Associates (Amco)","Miami, FL","https://jeinsuranceassociates.com","(305) 599-5000"],
-    [null,"Statewide Insurance (Central FL)","Dade City, FL","https://www.statewideinsurance.com","(352) 437-4664"],
-    [null,"Davis & Davis Insurance","Macclenny, FL","https://davisanddavisinsurance.com","(904) 259-2314"],
-    [null,"ClearPath Final Expense","Jacksonville, FL","https://clearpathfinalexpense.com","(904) 551-4334"],
-    [null,"The Paul Group","Davie, FL","https://thepaulgroupfl.com","(954) 837-6700"],
-    [null,"Alliance & Associates Financial","Orange Park, FL","https://www.allianceandassociates.com","(904) 269-2723"],
-    [null,"Pettineo Insurance Agency","Fort Lauderdale, FL","https://www.pettineoinsurance.com","(954) 943-3311"],
-    [null,"Senior Life Services (FL ops)","Vero Beach, FL","https://seniorlifeservicesinc.com","(772) 299-3900"],
-    ["Eric Martin","Senior Insurance Solutions LLC","St. Petersburg, FL",null,"727-687-0575"],
-    ["Carl L. Johnson","Protected Family Life","Tampa Bay, FL","https://protectedfamilylife.com",null]
+    ["Kathy Blanco","Blanco Agencies","Tampa, FL","https://blancoagencies.com","(813) 875-3030"],
+    ["Eric Martin","E Martin Insurance","Clearwater / St. Petersburg, FL","https://emartininsurance.com","(727) 687-0575"],
+    ["Jim Kelly","Senior Services Insurance Agency","Palm Beach Gardens, FL","https://www.seniorservicesflorida.com","(800) 952-9101"],
+    [null,"Senior Benefit Advisors FL LLC","Central Florida","https://www.seniorbenefitadvisor.com","(386) 800-1992"],
+    [null,"ClearPath Final Expense","Jacksonville, FL","https://clearpathfinalexpense.com",null],
+    [null,"Alliance & Associates Financial","Orange Park, FL","https://allianceandassociates.com","(904) 269-2723"],
+    ["Ali Taqi","Final Expense Insurance (W393613)","Naples, FL","https://itsfinalxinsuranceali.com","(239) 800-8508"]
   ];
   const agentGrid = document.getElementById("agentGrid");
   const mk = (tag, cls, text) => {

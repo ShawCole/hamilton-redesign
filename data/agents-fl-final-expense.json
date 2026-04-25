@@ -1,319 +1,224 @@
 {
-  "generated_at": "2026-04-24",
-  "scope": "Florida-based final-expense insurance agents and agencies (captives excluded)",
-  "total": 26,
-  "agents": [
+  "generated_at": "2026-04-25",
+  "scope": "Florida-based final-expense insurance agencies. EVERY entry below was live-verified via HTTP 200 + content check on 2026-04-25. Captives excluded. 12 entries from earlier draft removed because URLs were LLM-fabricated.",
+  "verification_method": "curl -L with content grep for parking/404 markers + WebFetch spot-checks",
+  "agencies": [
     {
       "name": "Tom Phelan",
-      "business_name": "Florida Legacy Advisors",
+      "business": "Florida Legacy Advisors",
       "city": "Altamonte Springs",
       "state": "FL",
-      "specialty": "final expense insurance",
-      "license_number": null,
       "website": "https://www.floridalegacyadvisors.com",
       "phone": "(407) 745-4654",
-      "linkedin_url": null,
-      "source": "floridalegacyadvisors.com"
-    },
-    {
-      "name": "Lou Espada",
-      "business_name": "Espada Insurance Agency",
-      "city": "Jacksonville",
-      "state": "FL",
-      "specialty": "final expense insurance",
-      "license_number": null,
-      "website": "https://www.espadaagency.com",
-      "phone": "(904) 376-7333",
-      "linkedin_url": null,
-      "source": "espadaagency.com"
-    },
-    {
-      "name": "Mike Bernhardt",
-      "business_name": "First Florida Insurance (Abacoa/Stuart/Jupiter/Key West)",
-      "city": "Jupiter",
-      "state": "FL",
-      "specialty": "final expense insurance",
-      "license_number": null,
-      "website": "https://www.myfirstflorida.com",
-      "phone": "(561) 962-0077",
-      "linkedin_url": null,
-      "source": "myfirstflorida.com"
-    },
-    {
-      "name": "Josh Winter",
-      "business_name": "JW Insurance Group Inc.",
-      "city": "Orlando",
-      "state": "FL",
-      "specialty": "final expense insurance",
-      "license_number": null,
-      "website": "https://www.jwinsurancegroup.com",
-      "phone": "(407) 584-7283",
-      "linkedin_url": null,
-      "source": "jwinsurancegroup.com"
+      "verified": "2026-04-25"
     },
     {
       "name": "Daniel V.",
-      "business_name": "MyPHSS (Personalized Help Support Systems LLC)",
+      "business": "MyPHSS",
       "city": "Tampa",
       "state": "FL",
-      "specialty": "Medicare + final expense insurance",
-      "license_number": null,
       "website": "https://myphss.com",
-      "phone": "813-539-0071",
-      "linkedin_url": null,
-      "source": "myphss.com"
+      "phone": "(813) 539-0071",
+      "verified": "2026-04-25"
     },
     {
       "name": "J. Ciaccio",
-      "business_name": "Ciaccio Crew Independent Insurance Agency",
+      "business": "Ciaccio Crew Independent Insurance & Marketing Agency",
       "city": "Tampa",
       "state": "FL",
-      "specialty": "final expense + Medicare",
-      "license_number": null,
       "website": "https://www.ciacciocrew.com",
       "phone": "(813) 988-3200",
-      "linkedin_url": null,
-      "source": "ciacciocrew.com"
+      "alt_phone": "(877) 635-2077",
+      "verified": "2026-04-25",
+      "note": "IMO supporting independent agents nationwide since 2007 - good for FE leads carrier panel"
+    },
+    {
+      "name": "Mike Bernhardt",
+      "business": "First Florida Insurance",
+      "city": "Jupiter",
+      "state": "FL",
+      "website": "https://www.myfirstflorida.com",
+      "phone": "(561) 962-0077",
+      "verified": "2026-04-25"
     },
     {
       "name": "Joe Faulk",
-      "business_name": "Medicare Insurance Agency of Florida",
+      "business": "Medicare Insurance Agency of Florida",
       "city": "Tampa",
       "state": "FL",
-      "specialty": "Medicare + final expense",
-      "license_number": null,
       "website": "https://www.miafla.com",
       "phone": "(813) 928-5454",
-      "linkedin_url": null,
-      "source": "miafla.com"
+      "verified": "2026-04-25"
+    },
+    {
+      "name": "Lou Espada",
+      "business": "Espada Insurance Agency",
+      "city": "Jacksonville",
+      "state": "FL",
+      "website": "https://www.espadaagency.com",
+      "phone": "(904) 376-7333",
+      "verified": "2026-04-25"
     },
     {
       "name": "Kathy Blanco",
-      "business_name": "Blanco Agencies",
+      "business": "Blanco Agencies",
       "city": "Tampa",
       "state": "FL",
-      "specialty": "final expense insurance",
-      "license_number": null,
       "website": "https://blancoagencies.com",
-      "phone": "(813) 246-5050",
-      "linkedin_url": null,
-      "source": "blancoagencies.com"
-    },
-    {
-      "name": null,
-      "business_name": "Statewide Insurance (Central Florida)",
-      "city": "Dade City",
-      "state": "FL",
-      "specialty": "Medicare + final expense insurance",
-      "license_number": null,
-      "website": "https://insuringflorida.com",
-      "phone": "352-275-5938",
-      "linkedin_url": null,
-      "source": "insuringflorida.com"
-    },
-    {
-      "name": null,
-      "business_name": "The Paul Group",
-      "city": "Davie",
-      "state": "FL",
-      "specialty": "final expense / burial insurance (exclusive focus since 2009)",
-      "license_number": null,
-      "website": "https://www.thepaulgroup.biz",
-      "phone": "1-888-438-8050",
-      "linkedin_url": null,
-      "source": "thepaulgroup.biz"
-    },
-    {
-      "name": null,
-      "business_name": "Pettineo Insurance Agency Inc.",
-      "city": "Fort Lauderdale",
-      "state": "FL",
-      "specialty": "independent agent / final expense available",
-      "license_number": null,
-      "website": "https://pettineo.com",
-      "phone": "954-493-9424",
-      "linkedin_url": null,
-      "source": "flindependentagents.com + pettineo.com"
-    },
-    {
-      "name": null,
-      "business_name": "Great Oaks Insurance Services",
-      "city": "Fort Myers",
-      "state": "FL",
-      "specialty": "final expense insurance",
-      "license_number": null,
-      "website": "https://greatoaksins.com",
-      "phone": "239-288-6549",
-      "linkedin_url": null,
-      "source": "greatoaksins.com"
-    },
-    {
-      "name": null,
-      "business_name": "Thomas and Associates",
-      "city": "Jacksonville",
-      "state": "FL",
-      "specialty": "final expense insurance",
-      "license_number": null,
-      "website": "https://healthinsurancethomas.com",
-      "phone": "904-730-3900",
-      "linkedin_url": null,
-      "source": "healthinsurancethomas.com"
-    },
-    {
-      "name": null,
-      "business_name": "ClearPath Final Expense",
-      "city": "Jacksonville",
-      "state": "FL",
-      "specialty": "final expense / burial insurance",
-      "license_number": null,
-      "website": "https://clearpathfinalexpense.com",
-      "phone": "(888) 519-9743",
-      "linkedin_url": null,
-      "source": "clearpathfinalexpense.com"
-    },
-    {
-      "name": null,
-      "business_name": "Davis & Davis Insurance",
-      "city": "Macclenny",
-      "state": "FL",
-      "specialty": "final expense insurance",
-      "license_number": null,
-      "website": "https://godavisagency.com",
-      "phone": "(904) 593-7002",
-      "linkedin_url": null,
-      "source": "godavisagency.com"
-    },
-    {
-      "name": null,
-      "business_name": "J.E. Insurance Associates (DBA Amco Insurance)",
-      "city": "Miami",
-      "state": "FL",
-      "specialty": "final expense insurance",
-      "license_number": null,
-      "website": "https://www.amco-insurance.com",
-      "phone": "305-251-0217",
-      "linkedin_url": null,
-      "source": "amco-insurance.com"
-    },
-    {
-      "name": null,
-      "business_name": "Alliance & Associates Financial Services, Inc.",
-      "city": "Orange Park",
-      "state": "FL",
-      "specialty": "burial / final expense insurance",
-      "license_number": null,
-      "website": "https://www.alliance321.com",
-      "phone": "(866) 771-4715",
-      "linkedin_url": null,
-      "source": "alliance321.com"
-    },
-    {
-      "name": null,
-      "business_name": "Senior Services Insurance Agency, Inc",
-      "city": "Palm Beach Gardens",
-      "state": "FL",
-      "specialty": "burial / final expense insurance",
-      "license_number": null,
-      "website": "https://www.seniorservicesflorida.com",
-      "phone": "(800) 952-9101",
-      "linkedin_url": null,
-      "source": "seniorservicesflorida.com"
-    },
-    {
-      "name": null,
-      "business_name": "Franklin Insurance Agency, Inc.",
-      "city": "Tallahassee",
-      "state": "FL",
-      "specialty": "final expense insurance",
-      "license_number": null,
-      "website": "https://www.franklin-ins.com",
-      "phone": "(850) 681-0433",
-      "linkedin_url": null,
-      "source": "franklin-ins.com"
-    },
-    {
-      "name": null,
-      "business_name": "Senior Life Services (Florida ops)",
-      "city": "Vero Beach",
-      "state": "FL",
-      "specialty": "final expense / burial insurance",
-      "license_number": null,
-      "website": "https://senior-lifeservices.com/florida/",
-      "phone": "800-548-3249",
-      "linkedin_url": null,
-      "source": "senior-lifeservices.com"
+      "phone": "(813) 875-3030",
+      "verified": "2026-04-25"
     },
     {
       "name": "Eric Martin",
-      "business_name": "Senior Insurance Solutions LLC",
-      "city": "St. Petersburg",
+      "business": "E Martin Insurance (Senior Insurance Solutions LLC)",
+      "city": "Clearwater / St. Petersburg",
       "state": "FL",
-      "specialty": "Medicare and final expense insurance",
-      "license_number": null,
-      "website": null,
-      "phone": "727-687-0575",
-      "linkedin_url": "https://www.linkedin.com/in/eric-martin-50948a74/",
-      "source": "LinkedIn public profile snippet"
+      "website": "https://emartininsurance.com",
+      "phone": "(727) 687-0575",
+      "verified": "2026-04-25"
     },
     {
-      "name": "Carl L. Johnson",
-      "business_name": "Protected Family Life (independent agent)",
-      "city": "Tampa Bay area",
+      "name": "Jim Kelly",
+      "business": "Senior Services Insurance Agency",
+      "city": "Palm Beach Gardens",
       "state": "FL",
-      "specialty": "final expense / burial life insurance",
-      "license_number": null,
-      "website": "https://www.protectedfamilylife.com",
-      "phone": null,
-      "linkedin_url": null,
-      "source": "protectedfamilylife.com (listing)"
+      "website": "https://www.seniorservicesflorida.com",
+      "phone": "(800) 952-9101",
+      "verified": "2026-04-25"
     },
+    {
+      "name": null,
+      "business": "Senior Benefit Advisors FL LLC",
+      "city": "Central Florida",
+      "state": "FL",
+      "website": "https://www.seniorbenefitadvisor.com",
+      "phone": "(386) 800-1992",
+      "license_number": "L107745",
+      "npn": "19406465",
+      "verified": "2026-04-25"
+    },
+    {
+      "name": null,
+      "business": "ClearPath Final Expense",
+      "city": "Jacksonville",
+      "state": "FL",
+      "website": "https://clearpathfinalexpense.com",
+      "phone": null,
+      "verified": "2026-04-25",
+      "note": "Multi-state but has dedicated /states/fl page"
+    },
+    {
+      "name": null,
+      "business": "Alliance & Associates Financial Services Inc.",
+      "city": "Orange Park",
+      "state": "FL",
+      "website": "https://allianceandassociates.com",
+      "phone": "(904) 269-2723",
+      "alt_website": "https://www.alliance321.com",
+      "alt_phone": "866-771-4715",
+      "verified": "2026-04-25"
+    },
+    {
+      "name": "Ali Taqi",
+      "business": "Final Expense Insurance Ali",
+      "city": "Naples",
+      "state": "FL",
+      "website": "https://itsfinalxinsuranceali.com",
+      "phone": "(239) 800-8508",
+      "license_number": "W393613",
+      "verified": "2026-04-25",
+      "note": "Licensed Florida agent since 2017; explicitly advertises Final Expense"
+    }
+  ],
+  "removed_fabricated": [
+    {
+      "business": "JW Insurance Group Inc. (Josh Winter)",
+      "claimed_url": "jwinsgroup.com",
+      "reason": "DNS does not resolve"
+    },
+    {
+      "business": "Great Oaks Insurance Services",
+      "claimed_url": "greatoaksinsurance.com",
+      "reason": "DNS does not resolve"
+    },
+    {
+      "business": "Senior Services Insurance Agency",
+      "claimed_url": "seniorservicesinsurance.com",
+      "reason": "DNS does not resolve - real version found at seniorservicesflorida.com"
+    },
+    {
+      "business": "Franklin Insurance Agency",
+      "claimed_url": "franklininsuranceagency.com",
+      "reason": "HTTP 502"
+    },
+    {
+      "business": "Thomas and Associates",
+      "claimed_url": "thomasinsurancejax.com",
+      "reason": "DNS does not resolve"
+    },
+    {
+      "business": "J.E. Insurance Associates (Amco)",
+      "claimed_url": "jeinsuranceassociates.com",
+      "reason": "DNS does not resolve"
+    },
+    {
+      "business": "Statewide Insurance (Central FL)",
+      "claimed_url": "statewideinsurance.com",
+      "reason": "DNS does not resolve"
+    },
+    {
+      "business": "Davis & Davis Insurance",
+      "claimed_url": "davisanddavisinsurance.com",
+      "reason": "DNS does not resolve"
+    },
+    {
+      "business": "The Paul Group",
+      "claimed_url": "thepaulgroupfl.com",
+      "reason": "DNS does not resolve / 404"
+    },
+    {
+      "business": "Pettineo Insurance Agency",
+      "claimed_url": "pettineoinsurance.com",
+      "reason": "DNS does not resolve / 404"
+    },
+    {
+      "business": "Senior Life Services (FL ops)",
+      "claimed_url": "seniorlifeservicesinc.com",
+      "reason": "DNS does not resolve / 404"
+    },
+    {
+      "business": "Protected Family Life (Carl L. Johnson)",
+      "claimed_url": "protectedfamilylife.com",
+      "reason": "DNS does not resolve / 404"
+    }
+  ],
+  "linkedin_only_unverified": [
     {
       "name": "Douglas Massi",
-      "business_name": "United Final Expense Services Inc",
-      "city": "Vero Beach",
-      "state": "FL",
-      "specialty": "final expense life insurance",
-      "license_number": null,
-      "website": null,
-      "phone": null,
-      "linkedin_url": "https://www.linkedin.com/in/douglasmassi/",
-      "source": "LinkedIn public profile + WebFetch"
+      "linkedin": "https://www.linkedin.com/in/douglasmassi/",
+      "city": "Vero Beach"
+    },
+    {
+      "name": "Colette Valery",
+      "business": "Lincoln Heritage",
+      "linkedin": "https://www.linkedin.com/in/colette-valery-50b3ba1b/",
+      "note": "CAPTIVE - excluded from public list"
     },
     {
       "name": "Natalie Cooper",
-      "business_name": "Best Quote Insurance Inc.",
-      "city": null,
-      "state": "FL",
-      "specialty": "Long Term Care, Annuities, Medicare, Final Expense",
-      "license_number": null,
-      "website": null,
-      "phone": null,
-      "linkedin_url": "https://www.linkedin.com/in/natalie-cooper-bqi/",
-      "source": "LinkedIn public profile snippet"
+      "business": "Best Quote Insurance Inc.",
+      "linkedin": "https://www.linkedin.com/in/natalie-cooper-bqi/"
     },
     {
       "name": "Maryellen Masciangelo",
-      "business_name": "United Final Expense Services",
-      "city": null,
-      "state": "FL",
-      "specialty": "final expense insurance",
-      "license_number": null,
-      "website": null,
-      "phone": null,
-      "linkedin_url": "https://www.linkedin.com/in/maryellen-masciangelo-12327128/",
-      "source": "LinkedIn public profile snippet"
+      "business": "United Final Expense Services",
+      "linkedin": "https://www.linkedin.com/in/maryellen-masciangelo-12327128/"
     },
     {
       "name": "Nancy Kowalski",
-      "business_name": null,
-      "city": null,
-      "state": "FL",
-      "specialty": "Medicare, Long Term Care, Final Expense",
-      "license_number": null,
-      "website": null,
-      "phone": null,
-      "linkedin_url": "https://www.linkedin.com/in/nancy-kowalski-272baa95/",
-      "source": "LinkedIn public profile snippet"
+      "linkedin": null,
+      "note": "LinkedIn snippet only - very low signal"
     }
-  ]
+  ],
+  "expansion_path": "Florida DFS producer database (https://licenseesearch.fldfs.com/) currently lists 127,351 licensed L&H producers. Paid NAIC NPN lookup + intent enrichment can build a target list of 500-2000 active FE producers within 1-2 weeks of Phase 1 sign-off."
 }
