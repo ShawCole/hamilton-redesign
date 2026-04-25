@@ -291,17 +291,8 @@
     color: var(--gold-bright);
     display: flex; align-items: center; gap: 10px;
   }
-  .explorer-bar__title .dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--ok);
-    box-shadow: 0 0 0 0 rgba(79,174,111,.6);
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(79,174,111,.7); }
-    70% { box-shadow: 0 0 0 10px rgba(79,174,111,0); }
-    100% { box-shadow: 0 0 0 0 rgba(79,174,111,0); }
-  }
+  /* (the static gold dot in the explorer bar is inlined; no pulse animation
+     because this is a snapshot, not a live feed) */
   .explorer-bar__btn {
     font-family: "IBM Plex Mono", monospace;
     font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
@@ -882,7 +873,7 @@
     </div>
     <h1>One proposal. <em>Three pages.</em> A productized lead machine for final‑expense agents.</h1>
     <div class="kicker">
-      This revision is bigger: we've added the two-layer marketing playbook (we market to agents and on their behalf), embedded the live nationwide final-expense intent map, pulled a first-pass list of 97 real agents, mapped Meta and DSP ad sizes to the vertical, and productized your offer into a primary package + add-ons. Submitting feedback below rebuilds this proposal page and deploys two companion landing pages — one for agent acquisition, one branded for each agent's consumer market.
+      This revision is bigger: we've added the two-layer marketing playbook (we market to agents and on their behalf), embedded a sourced market snapshot of the nationwide final-expense opportunity, pulled a narrowed first-pass list of 26 Florida-based FE agents, mapped Meta and DSP ad sizes to the vertical, and productized your offer into a primary package + add-ons. Submitting feedback below rebuilds this proposal page and deploys two companion landing pages — one for agent acquisition, one branded for each agent's consumer market.
     </div>
   </div>
   <div class="stamp">Draft 02 · Live rebuild enabled</div>
@@ -1033,15 +1024,15 @@
 <!-- IV · INTENT MAP (embedded explorer) -->
 <section class="block ink" id="intent">
   <div class="wrap">
-    <div class="section-label"><span class="dot"></span><span>IV · The Intent Map</span></div>
-    <h2>Two million in-market final-expense shoppers. <em>Refreshed weekly.</em></h2>
-    <p class="lede">Every vendor says "intent data." Almost none of them can show it. Below is the live nationwide final-expense intent map — refreshed every 7 days from Bombora + ArkData's 40 data partners. This is the same pipeline that feeds agent campaigns once they sign.</p>
+    <div class="section-label"><span class="dot"></span><span>IV · The Market Snapshot</span></div>
+    <h2>$1.05 B annual premium. <em>1.06 M policies sold.</em> 35 M target consumers in the top 20 states.</h2>
+    <p class="lede">A sourced snapshot of the US final-expense opportunity, compiled April 2026. State sizing from US Census + ACL income data; premium and policy figures from LIMRA-LIC's 2024 industry survey; search volumes from Empathy.com 2026 and funeral-industry SEO research; demographics from LIMRA Insurance Barometer + Census homeownership. Every figure is cited inline in the snapshot. This is what the addressable market looks like — not a real-time feed.</p>
 
     <div class="explorer-wrap">
       <div class="explorer-bar">
         <div class="explorer-bar__title">
-          <span class="dot"></span>
-          <span>Final Expense · Live Intent Map · US Nationwide</span>
+          <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);"></span>
+          <span>Final Expense · Market Snapshot · April 2026</span>
         </div>
         <div style="display:flex;gap:10px;">
           <a href="https://hamilton-fe-intent.netlify.app" target="_blank" rel="noopener" class="explorer-bar__btn">Open Full Screen ↗</a>
@@ -1049,13 +1040,13 @@
       </div>
       <iframe
         src="https://hamilton-fe-intent.netlify.app"
-        title="HMS · Final Expense Live Intent Map"
+        title="HMS · Final Expense Market Snapshot · April 2026"
         loading="lazy"></iframe>
     </div>
 
     <div class="comment-block" data-scope="intent" data-id="intent-feedback">
-      <label for="c-intent">Comments on the intent map</label>
-      <textarea id="c-intent" placeholder="e.g. Drop the live stream. Surface county-level rather than state-level. Or: add Spanish-language share."></textarea>
+      <label for="c-intent">Comments on the market snapshot</label>
+      <textarea id="c-intent" placeholder="e.g. Add county-level FL data. Or: surface Spanish-language share. Or: refresh quarterly."></textarea>
     </div>
   </div>
 </section>

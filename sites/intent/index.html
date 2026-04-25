@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Final Expense · Live Intent Map — HMS</title>
-<meta name="description" content="Nationwide final-expense life-insurance consumer intent map. Refreshed weekly by ListMagic / ArkData." />
+<title>Final Expense · Market Snapshot · April 2026</title>
+<meta name="description" content="Sourced market snapshot of the US final-expense life-insurance opportunity. Compiled by Hamilton Marketing Services, April 2026." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -13,7 +13,7 @@
     --navy: #0B1A36; --navy-ink: #06102A; --navy-soft: #132746; --navy-card: #101F3E;
     --gold: #C9A55B; --gold-bright: #E3B865; --gold-deep: #9B7E3F;
     --paper: #F4EFE6; --paper-warm: #ECE4D3;
-    --ok: #4FAE6F; --hot: #E07A3C; --line: rgba(227,184,101,.18);
+    --line: rgba(227,184,101,.18);
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
@@ -38,21 +38,14 @@
   }
   .brand { font-family: "Fraunces", serif; font-weight: 500; font-size: 20px; letter-spacing: -0.01em; }
   .brand em { font-style: italic; color: var(--gold-bright); font-weight: 400; }
-  .status {
-    display: flex; align-items: center; gap: 10px;
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
     font-family: "IBM Plex Mono", monospace;
     font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
     color: var(--gold-bright);
-  }
-  .dot-live {
-    width: 8px; height: 8px; border-radius: 50%; background: var(--ok);
-    box-shadow: 0 0 0 0 rgba(79,174,111,.6);
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(79,174,111,.7); }
-    70% { box-shadow: 0 0 0 10px rgba(79,174,111,0); }
-    100% { box-shadow: 0 0 0 0 rgba(79,174,111,0); }
+    padding: 6px 10px;
+    border: 1px solid var(--gold);
+    border-radius: 2px;
   }
 
   .counters {
@@ -76,14 +69,15 @@
   }
   .counter .val {
     font-family: "Fraunces", serif; font-weight: 400;
-    font-size: clamp(28px, 3.4vw, 40px);
+    font-size: clamp(26px, 3.4vw, 38px);
     line-height: 1; letter-spacing: -0.02em;
     margin: 10px 0 4px; color: var(--paper);
     font-variation-settings: "opsz" 144;
   }
   .counter .sub {
     font-family: "IBM Plex Mono", monospace;
-    font-size: 10px; letter-spacing: .1em; color: var(--gold-bright);
+    font-size: 10px; letter-spacing: .08em; color: var(--gold-bright);
+    line-height: 1.4;
   }
 
   .grid {
@@ -101,13 +95,14 @@
   }
   .panel .sub {
     font-family: "IBM Plex Mono", monospace;
-    font-size: 10px; letter-spacing: .16em; text-transform: uppercase;
+    font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
     color: rgba(244,239,230,.55);
     margin-bottom: 14px;
+    line-height: 1.5;
   }
 
   .state-row {
-    display: grid; grid-template-columns: 24px 1fr 68px 54px;
+    display: grid; grid-template-columns: 24px 1fr 78px 64px;
     gap: 10px; align-items: center;
     padding: 6px 0; font-family: "IBM Plex Mono", monospace;
     font-size: 12px;
@@ -138,10 +133,16 @@
     font-size: 11px; color: var(--gold-bright); font-weight: 500;
     white-space: nowrap;
   }
-  .topic.hot::after {
-    content: "HOT"; font-family: "IBM Plex Mono", monospace;
+  .topic.est::after {
+    content: "EST"; font-family: "IBM Plex Mono", monospace;
     font-size: 9px; letter-spacing: .15em;
-    background: var(--hot); color: var(--navy-ink);
+    background: rgba(244,239,230,.08); color: rgba(244,239,230,.6);
+    padding: 2px 6px; border-radius: 2px; font-weight: 500;
+  }
+  .topic.cited::after {
+    content: "CITED"; font-family: "IBM Plex Mono", monospace;
+    font-size: 9px; letter-spacing: .15em;
+    background: rgba(227,184,101,.18); color: var(--gold-bright);
     padding: 2px 6px; border-radius: 2px; font-weight: 600;
   }
 
@@ -180,40 +181,61 @@
     font-weight: 500; font-size: 13px;
   }
 
-  .feed-band {
+  .industry-band {
     margin-top: 6px;
     background: var(--navy-card); border: 1px solid var(--line);
-    border-radius: 4px; padding: 14px 18px;
+    border-radius: 4px; padding: 18px 22px;
   }
-  .feed-title {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-bottom: 10px;
+  .industry-band h3 {
+    margin: 0 0 14px; font-family: "Fraunces", serif; font-weight: 500;
+    font-size: 17px; letter-spacing: -0.01em;
   }
-  .feed-title h3 { margin: 0; font-family: "Fraunces", serif; font-weight: 500; font-size: 15px; }
-  .feed-title .chip {
+  .industry-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px 28px;
+  }
+  .industry-stat .lbl {
     font-family: "IBM Plex Mono", monospace;
-    font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
-    padding: 3px 8px; background: rgba(79,174,111,.14); color: var(--ok);
-    border-radius: 2px;
+    font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(244,239,230,.55); line-height: 1.45;
+    margin-bottom: 6px;
   }
-  .feed {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 28px;
-    max-height: 168px; overflow: hidden;
-    position: relative;
+  .industry-stat .val {
+    font-family: "Fraunces", serif; font-weight: 400;
+    font-size: 22px; color: var(--gold-bright); line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .industry-stat .src {
     font-family: "IBM Plex Mono", monospace;
-    font-size: 11px; color: rgba(244,239,230,.8);
+    font-size: 9px; letter-spacing: .08em;
+    color: rgba(244,239,230,.4); margin-top: 6px;
   }
-  .feed::after {
-    content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 40px;
-    background: linear-gradient(180deg, transparent, var(--navy-card));
-    pointer-events: none;
+
+  /* Sources block */
+  .sources {
+    margin-top: 18px;
+    background: var(--navy-card); border: 1px solid var(--line);
+    border-radius: 4px; padding: 18px 22px;
   }
-  .feed .ln {
-    padding: 3px 0;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  .sources h3 {
+    margin: 0 0 12px; font-family: "Fraunces", serif; font-weight: 500;
+    font-size: 15px;
   }
-  .feed .ln .age { color: var(--gold-bright); margin-right: 8px; font-weight: 500; }
-  .feed .ln .geo { color: rgba(244,239,230,.5); margin-left: 6px; }
+  .sources ul {
+    margin: 0; padding: 0; list-style: none;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 28px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .04em; color: rgba(244,239,230,.7);
+    line-height: 1.55;
+  }
+  .sources a { color: var(--gold-bright); text-decoration: none; border-bottom: 1px dashed rgba(227,184,101,.4); }
+  .sources a:hover { color: var(--gold); }
+  .sources .est-note {
+    margin-top: 12px; padding-top: 10px;
+    border-top: 1px dashed rgba(227,184,101,.18);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; color: rgba(244,239,230,.55); line-height: 1.55;
+  }
+  .sources .est-note strong { color: rgba(244,239,230,.8); }
 
   .foot {
     margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line);
@@ -223,136 +245,224 @@
     color: rgba(244,239,230,.55);
   }
 
+  /* horizontally scrollable wrapper for any wide table content */
+  .scroll-x {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .scroll-x::-webkit-scrollbar { height: 8px; }
+  .scroll-x::-webkit-scrollbar-track { background: transparent; }
+  .scroll-x::-webkit-scrollbar-thumb {
+    background: rgba(201,165,91,.4); border-radius: 4px;
+  }
+  .scroll-x::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
   @media (max-width: 960px) {
     .counters { grid-template-columns: repeat(2, 1fr); }
     .grid { grid-template-columns: 1fr 1fr; }
     .panel.panel-demos { grid-column: span 2; min-height: auto; }
+    .industry-grid { grid-template-columns: repeat(2, 1fr); }
+    .sources ul { grid-template-columns: 1fr; }
   }
   @media (max-width: 640px) {
     .shell { padding: 12px 14px 28px; }
     header.top { margin-bottom: 14px; padding-bottom: 10px; }
     .brand { font-size: 16px; }
+    .badge { font-size: 9px; padding: 5px 8px; }
     .counters { grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 14px; }
     .counter { padding: 12px 14px; }
-    .counter .val { font-size: 24px; }
+    .counter .val { font-size: 22px; }
     .grid { grid-template-columns: 1fr; gap: 10px; margin-bottom: 12px; }
     .panel { min-height: auto; padding: 14px 14px 12px; }
-    .feed { grid-template-columns: 1fr; max-height: 140px; }
     .histo { height: 90px; gap: 4px; }
     .panel.panel-demos .stat-rows { display: none; }
+    .industry-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .industry-stat .val { font-size: 18px; }
   }
   @media (max-width: 430px) {
     .counters { grid-template-columns: 1fr 1fr; }
-    .counter .val { font-size: 22px; }
+    .counter .val { font-size: 20px; }
     .panel h3 { font-size: 15px; }
-    .state-row { grid-template-columns: 20px 1fr 56px; }
+    .state-row { grid-template-columns: 20px 1fr 64px; }
     .state-row .bar { display: none; }
+    .industry-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 <div class="shell">
   <header class="top">
-    <div class="brand">Final Expense · Live <em>Intent Map</em></div>
-    <div class="status">
-      <span class="dot-live"></span>
-      <span>Refreshed 4 days ago · Next refresh in 3d</span>
+    <div class="brand">Final Expense · <em>Market Snapshot</em></div>
+    <div class="badge">
+      <span>Snapshot · April 2026 · sources cited</span>
     </div>
   </header>
 
   <div class="counters">
     <div class="counter">
-      <div class="lbl">In-market consumers · 30d</div>
-      <div class="val">2,418,302</div>
-      <div class="sub">▲ 4.2% vs prior 30d</div>
+      <div class="lbl">FE-target population · top 20 states</div>
+      <div class="val">35.2 M</div>
+      <div class="sub">Adults 65+ in HH under $75K · ACS 2023</div>
     </div>
     <div class="counter">
-      <div class="lbl">High-intent · last 7d</div>
-      <div class="val">317,846</div>
-      <div class="sub">▲ 1.1% wk/wk</div>
+      <div class="lbl">US FE annual premium</div>
+      <div class="val">$1.05 B</div>
+      <div class="sub">+16% YoY · LIMRA-LIC 2024</div>
     </div>
     <div class="counter">
-      <div class="lbl">Buying signals / week</div>
-      <div class="val">20.4 B</div>
-      <div class="sub">Bombora · 40 sources</div>
+      <div class="lbl">US FE policies sold (2024)</div>
+      <div class="val">1.06 M</div>
+      <div class="sub">+10% YoY · LIMRA-LIC tracked carriers</div>
     </div>
     <div class="counter">
-      <div class="lbl">Identity-resolved</div>
-      <div class="val">94.6%</div>
-      <div class="sub">SHA-256 · Meta-ready</div>
+      <div class="lbl">FL licensed L&amp;H agents</div>
+      <div class="val">127,351</div>
+      <div class="sub">FL DFS · 2025 license database</div>
     </div>
   </div>
 
   <div class="grid">
     <div class="panel">
-      <h3>Top states by in-market volume</h3>
-      <div class="sub">30-day high-intent consumer count</div>
+      <h3>Top states by FE-target population</h3>
+      <div class="sub">Adults 65+ × ~78% in HH income under $75K (ACS 2023 + ACL 2024)</div>
       <div id="states"></div>
     </div>
 
     <div class="panel">
-      <h3>Active intent topics</h3>
-      <div class="sub">Elevated signal volume · last 7d</div>
+      <h3>Top FE search topics · US monthly volume</h3>
+      <div class="sub">Empathy.com 2026 · Choice Mutual · NFDA. EST = derived estimate</div>
       <div id="topics"></div>
     </div>
 
     <div class="panel panel-demos">
-      <h3>Consumer profile</h3>
-      <div class="sub">Age distribution · high-intent cohort</div>
+      <h3>Buyer profile</h3>
+      <div class="sub">Age curve approximated from LIMRA-LIC 2020 (avg issue 63.5)</div>
       <div class="histo">
-        <div class="h" data-lbl="50-54" style="height:22%"></div>
+        <div class="h" data-lbl="50-54" style="height:18%"></div>
         <div class="h" data-lbl="55-59" style="height:38%"></div>
-        <div class="h" data-lbl="60-64" style="height:62%"></div>
-        <div class="h" data-lbl="65-69" style="height:88%"></div>
-        <div class="h" data-lbl="70-74" style="height:100%"></div>
-        <div class="h" data-lbl="75-79" style="height:74%"></div>
-        <div class="h" data-lbl="80-85" style="height:41%"></div>
+        <div class="h" data-lbl="60-64" style="height:78%"></div>
+        <div class="h" data-lbl="65-69" style="height:100%"></div>
+        <div class="h" data-lbl="70-74" style="height:88%"></div>
+        <div class="h" data-lbl="75-79" style="height:54%"></div>
+        <div class="h" data-lbl="80-85" style="height:24%"></div>
       </div>
       <div class="stat-rows">
-        <div class="row"><span class="k">Median age</span><span class="v">68</span></div>
-        <div class="row"><span class="k">HH income · median</span><span class="v">$38,400</span></div>
-        <div class="row"><span class="k">Homeowner rate</span><span class="v">61%</span></div>
-        <div class="row"><span class="k">Female / Male</span><span class="v">57% / 43%</span></div>
-        <div class="row"><span class="k">Married / Widowed</span><span class="v">48% / 28%</span></div>
-        <div class="row"><span class="k">English / Spanish</span><span class="v">86% / 11%</span></div>
+        <div class="row"><span class="k">Avg issue age</span><span class="v">63.5 (LIMRA 2020)</span></div>
+        <div class="row"><span class="k">Median HH income</span><span class="v">~$24,000 (industry)</span></div>
+        <div class="row"><span class="k">Female priority share</span><span class="v">64% vs 56% M (LIMRA)</span></div>
+        <div class="row"><span class="k">Homeowner rate · 65+</span><span class="v">79.0% (Census 2023)</span></div>
+        <div class="row"><span class="k">Avg face value (blended)</span><span class="v">~$13,820 (LIMRA 2024)</span></div>
+        <div class="row"><span class="k">Avg monthly premium</span><span class="v">$30–$70 (NorthStar 2025)</span></div>
       </div>
     </div>
   </div>
 
-  <div class="feed-band">
-    <div class="feed-title">
-      <h3>Live intent signals · sample stream</h3>
-      <div class="chip">Streaming</div>
+  <div class="industry-band">
+    <h3>Industry context · validated figures</h3>
+    <div class="industry-grid">
+      <div class="industry-stat">
+        <div class="lbl">Avg face value · Simplified Issue</div>
+        <div class="val">$14,535</div>
+        <div class="src">LIMRA-LIC 2024 · 85% of sales</div>
+      </div>
+      <div class="industry-stat">
+        <div class="lbl">Avg face value · Guaranteed Issue</div>
+        <div class="val">$9,786</div>
+        <div class="src">LIMRA-LIC 2024 · 15% of sales</div>
+      </div>
+      <div class="industry-stat">
+        <div class="lbl">Independent agent share of distribution</div>
+        <div class="val">86%</div>
+        <div class="src">LIMRA-LIC 2024</div>
+      </div>
+      <div class="industry-stat">
+        <div class="lbl">Avg US funeral with burial</div>
+        <div class="val">$8,300</div>
+        <div class="src">NFDA 2023 GPL Study</div>
+      </div>
+      <div class="industry-stat">
+        <div class="lbl">US cremation rate (2024)</div>
+        <div class="val">60.5%</div>
+        <div class="src">US Funerals Online · projected 80% by 2035</div>
+      </div>
+      <div class="industry-stat">
+        <div class="lbl">FL population age 65+</div>
+        <div class="val">5.09 M</div>
+        <div class="src">Census 2024 · 21.8% of state · #1 by share</div>
+      </div>
+      <div class="industry-stat">
+        <div class="lbl">FL implied FE policies / yr</div>
+        <div class="val">80–95 K</div>
+        <div class="src">EST · 1.15× concentration multiplier vs LIMRA national</div>
+      </div>
+      <div class="industry-stat">
+        <div class="lbl">Bombora intent interactions / month</div>
+        <div class="val">16.6 B</div>
+        <div class="src">Bombora 2025 · 5,000+ B2B sites · 20,100+ topics</div>
+      </div>
     </div>
-    <div class="feed" id="feed"></div>
+  </div>
+
+  <div class="sources">
+    <h3>Sources</h3>
+    <ul>
+      <li><a href="https://www.limra.com/en/newsroom/news-releases/2025/life-insurers-council-final-expense-insurance-new-annualized-premium-increased-16-in-2024/" target="_blank" rel="noopener">LIMRA-LIC · Final Expense 2024 (premium, policies, face values)</a></li>
+      <li><a href="https://carepatrol.com/blog/senior-population-by-state/" target="_blank" rel="noopener">CarePatrol · Senior Population by State (ACS 2023)</a></li>
+      <li><a href="https://acl.gov/aging-and-disability-in-america/data-and-research/profile-older-americans" target="_blank" rel="noopener">ACL · 2024 Profile of Older Americans (income)</a></li>
+      <li><a href="https://www.empathy.com/blog/life-insurance-search-demand-is-growing" target="_blank" rel="noopener">Empathy.com · 2026 Life-Insurance Search Demand</a></li>
+      <li><a href="https://choicemutual.com/blog/life-insurance-statistics/" target="_blank" rel="noopener">Choice Mutual · Life Insurance Statistics 2026</a></li>
+      <li><a href="https://nfda.org/news/media-center/nfda-news-releases/id/8134/2023-nfda-general-price-list-study-shows-inflation-increasing-faster-than-the-cost-of-a-funeral" target="_blank" rel="noopener">NFDA · 2023 General Price List Study</a></li>
+      <li><a href="https://www.americashealthrankings.org/explore/measures/pct_65plus/FL" target="_blank" rel="noopener">America's Health Rankings · FL 65+ share (2024)</a></li>
+      <li><a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener">FL DFS · Licensee Search (127,351 L&amp;H)</a></li>
+      <li><a href="https://www.census.gov/library/stories/2023/07/younger-householders-drove-rebound-in-homeownership.html" target="_blank" rel="noopener">US Census · Homeownership 2023 (79% age 65+)</a></li>
+      <li><a href="https://www.limra.com/en/research/research-abstracts-public/2024/2024-insurance-barometer-study/" target="_blank" rel="noopener">LIMRA · 2024 Insurance Barometer (gender split)</a></li>
+      <li><a href="https://bombora.com/our-data/" target="_blank" rel="noopener">Bombora · Our Data (16.6B / mo)</a></li>
+      <li><a href="https://www.bls.gov/ooh/Sales/Insurance-sales-agents.htm" target="_blank" rel="noopener">BLS · Insurance Sales Agents (568,800 jobs)</a></li>
+    </ul>
+    <div class="est-note">
+      <strong>EST</strong> markers indicate values derived from published ratios + industry methodology rather than a single primary citation. Search-volume figures use the Empathy.com 2026 dataset where available; remaining keywords are sized using published head-term ratios. Top-state FE-target population uses 65+ (canonical Census senior breakpoint) × 78% income filter; addressable pool widens ~1.6× when the 50–64 cohort is added. Florida FE policy volume is estimated as 8–10% above population share to reflect older age skew. Full methodology and citations: <a href="https://github.com/ShawCole/hamilton-redesign/blob/master/research/fe-market-snapshot.md" target="_blank" rel="noopener">research/fe-market-snapshot.md</a>.
+    </div>
   </div>
 
   <div class="foot">
-    <div>Hamilton Marketing Services · Powered by ArkData + ListMagic</div>
-    <div>Data vintage · Apr 2026 · Sample N≈3.4M</div>
+    <div>Hamilton Marketing Services · April 2026 snapshot</div>
+    <div>Compiled from public sources · refresh quarterly</div>
   </div>
 </div>
 
 <script>
-  // Safe DOM construction — no innerHTML with untrusted data.
-  const $ = (sel) => document.querySelector(sel);
+  // Top 20 states · FE-target population (65+ × 0.78 HH income filter)
+  // Source: CarePatrol ACS 2023 + ACL 2024
+  const states = [
+    ["California", 4923308],
+    ["Florida", 3835020],
+    ["Texas", 3266689],
+    ["New York", 2834599],
+    ["Pennsylvania", 2024626],
+    ["Ohio", 1722981],
+    ["Illinois", 1719059],
+    ["Michigan", 1502867],
+    ["North Carolina", 1488621],
+    ["Georgia", 1323049],
+    ["New Jersey", 1285708],
+    ["Virginia", 1169126],
+    ["Arizona", 1118925],
+    ["Washington", 1043452],
+    ["Massachusetts", 1009066],
+    ["Tennessee", 968757],
+    ["Indiana", 919735],
+    ["Missouri", 886560],
+    ["Maryland", 831780],
+    ["Colorado", 735552]
+  ];
+  const max = states[0][1];
+  const $ = (s) => document.querySelector(s);
   const el = (tag, cls, txt) => {
     const n = document.createElement(tag);
     if (cls) n.className = cls;
     if (txt !== undefined) n.textContent = txt;
     return n;
   };
-
-  const states = [
-    ["Florida",287640],["Texas",241920],["California",198300],
-    ["New York",157802],["Pennsylvania",146910],["Ohio",138204],
-    ["Georgia",131456],["North Carolina",124300],["Michigan",118220],
-    ["Illinois",112408],["Virginia",98340],["Tennessee",92110],
-    ["Arizona",88420],["New Jersey",81056],["Indiana",76820],
-    ["Missouri",71104],["Alabama",68450],["Wisconsin",64202],
-    ["South Carolina",60812],["Kentucky",57680]
-  ];
-  const max = states[0][1];
   const statesEl = $("#states");
   states.forEach((s, i) => {
     const row = el("div", "state-row");
@@ -363,65 +473,37 @@
     fill.style.width = ((s[1]/max)*100).toFixed(0) + "%";
     bar.appendChild(fill);
     row.appendChild(bar);
-    row.appendChild(el("div", "vol", s[1].toLocaleString()));
+    row.appendChild(el("div", "vol", (s[1]/1000).toFixed(0) + "K"));
     statesEl.appendChild(row);
   });
 
+  // Search topics — US monthly volumes
+  // Cited: from Empathy.com 2026 + funeral SEO research
+  // EST: derived from published head-term ratios
   const topics = [
-    ["Burial insurance quote seniors 65+", 48204, true],
-    ["Final expense insurance no medical exam", 42112, true],
-    ["Cheap burial insurance Florida", 31840, true],
-    ["Whole life insurance for seniors over 70", 28620, false],
-    ["Cost of funeral 2026", 24908, false],
-    ["Colonial Penn vs Mutual of Omaha", 19402, false],
-    ["Guaranteed issue life insurance 80 year old", 17880, false],
-    ["AARP life insurance alternative", 16340, false],
-    ["$10,000 burial policy", 14802, false],
-    ["Pre-need funeral planning", 13210, false],
-    ["Life insurance with diabetes", 12608, false],
-    ["Cremation cost vs burial", 10720, false],
-    ["Simplified issue life insurance", 9840, false],
-    ["Social Security death benefit enough?", 8942, false],
-    ["Funeral pre-payment plans", 7602, false]
+    ["life insurance", 301000, "cited"],
+    ["AARP life insurance", 33100, "est"],
+    ["burial insurance", 27100, "est"],
+    ["funeral cost", 22000, "est"],
+    ["cremation cost", 18100, "est"],
+    ["final expense insurance", 14800, "est"],
+    ["no medical exam life insurance", 9900, "est"],
+    ["Colonial Penn ($9.95 plan combined)", 8100, "est"],
+    ["term life insurance", 81000, "cited"],
+    ["burial insurance quotes", 6600, "est"],
+    ["Lincoln Heritage life insurance", 6600, "est"],
+    ["guaranteed issue life insurance", 5400, "est"],
+    ["Mutual of Omaha burial insurance", 4400, "est"],
+    ["pre-need funeral planning", 2400, "est"],
+    ["$10,000 burial policy", 1900, "est"]
   ];
   const tEl = $("#topics");
   topics.forEach(t => {
-    const r = el("div", "topic" + (t[2] ? " hot" : ""));
+    const r = el("div", "topic " + (t[2] === "cited" ? "cited" : "est"));
     r.appendChild(el("div", "t", t[0]));
-    r.appendChild(el("div", "n", t[1].toLocaleString()));
+    r.appendChild(el("div", "n", t[1].toLocaleString() + " / mo"));
     tEl.appendChild(r);
   });
-
-  const cities = ["Tampa, FL","Orlando, FL","Jacksonville, FL","Miami, FL","Fort Myers, FL",
-    "Houston, TX","Dallas, TX","San Antonio, TX","Atlanta, GA","Savannah, GA",
-    "Phoenix, AZ","Charlotte, NC","Raleigh, NC","Pittsburgh, PA","Philadelphia, PA",
-    "Columbus, OH","Cleveland, OH","Louisville, KY","Nashville, TN","Birmingham, AL",
-    "Indianapolis, IN","St. Louis, MO","Milwaukee, WI","Richmond, VA","Tucson, AZ"];
-  const acts = ["burial insurance quote","final expense no-exam","cheap burial coverage",
-    "senior whole life","AARP alternative","$10K burial policy","pre-need funeral",
-    "funeral cost 2026","guaranteed issue 80+","simplified issue life","cremation vs burial"];
-  const ages = [62,65,67,68,69,71,72,74,76,78];
-  const feedEl = $("#feed");
-  const pad = (n) => String(n).padStart(2,"0");
-  function makeLine() {
-    const ln = el("div", "ln");
-    const age = el("span", "age", "F·" + ages[Math.floor(Math.random()*ages.length)]);
-    const actTxt = document.createTextNode(acts[Math.floor(Math.random()*acts.length)] + " ");
-    const geo = el("span", "geo",
-      cities[Math.floor(Math.random()*cities.length)] +
-      " · " + pad(Math.floor(Math.random()*10)+1) + "m " +
-      pad(Math.floor(Math.random()*60)) + "s ago"
-    );
-    ln.appendChild(age);
-    ln.appendChild(actTxt);
-    ln.appendChild(geo);
-    return ln;
-  }
-  for (let i=0; i<16; i++) feedEl.appendChild(makeLine());
-  setInterval(() => {
-    feedEl.insertBefore(makeLine(), feedEl.firstChild);
-    if (feedEl.children.length > 18) feedEl.removeChild(feedEl.lastChild);
-  }, 3000);
 </script>
 </body>
 </html>
